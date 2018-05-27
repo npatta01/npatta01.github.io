@@ -1,0 +1,9 @@
+{{ $dateFormat := default "Jan 2, 2006" (index .Site.Params "date_format") }}
+
+{{ $author := .Params.author | default .Site.Params.author }}
+<div class="blog-post-date text-secondary">
+    {{ if not .Date.IsZero }}
+        {{ .Date.Format $dateFormat }}
+    {{ end }}
+
+</div>

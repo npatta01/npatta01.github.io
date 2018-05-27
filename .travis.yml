@@ -1,0 +1,34 @@
+# go is not actually required for the build process, but I've
+# had issues with golang on some lightweight distributions
+# such as alpine; using the go image ensures that the build
+# will not have any issues running hugo
+language: go
+go:
+- 1.7
+env:
+  global:
+  - HUGO_VERSION=0.41  # set in the environment to make it easy
+
+# install hugo before the build is run; download the public
+# release, untar, and copy it to a known location
+before_install:
+- mkdir -p bin
+- curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
+  -o bin/hugo.tar.gz
+- tar xzvvf bin/hugo.tar.gz -C ./bin
+# on build attempt to generate the site
+script:
+- "./bin/hugo"
+# the deploy configuration for github pages; this is an
+# out-of-the-box travis feature
+deploy:
+  provider: pages
+  # publish the "public" folder, where hugo builds by default
+  local_dir: public
+  skip_cleanup: true
+  # use the github token stored in the environment, which is
+  # securely encrypted in `matrix.secure` above
+  github_token: "$GITHUB_TOKEN"
+  # only publish on master branch builds
+  on:
+    branch: master
