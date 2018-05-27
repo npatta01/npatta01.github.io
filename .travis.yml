@@ -10,8 +10,8 @@ env:
 # install hugo before the build is run; download the public
 # release, untar, and copy it to a known location
 install:
-  - curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb
-  - sudo dpkg -i hugo*.deb
+  - curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb -o hugo.deb
+  - sudo dpkg -i hugo.deb
   - pip install Pygments
   - rm -rf public 2> /dev/null
 
