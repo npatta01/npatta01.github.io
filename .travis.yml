@@ -29,6 +29,8 @@ deploy:
   # use the github token stored in the environment, which is
   # securely encrypted in `matrix.secure` above
   github_token: "$GITHUB_TOKEN"
+  # destination branch containing changes
+  target_branch: master
   # only publish on master branch builds
   on:
-    branch: master
+    branch: source
