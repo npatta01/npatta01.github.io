@@ -1,21 +1,30 @@
 ---
 title: Useful Google Cloud Commands
 date: 2017-10-01
+tags: 
+    - google-cloud
+categories:
+    - cheatsheet
 ---
 
-If your infrastructure is in Google Cloud , it is helpful to use the google cloud sdk.
-Here are some of the common commpands I use.
+If your infrastructure is in Google Cloud , it is helpful to use the google cloud sdk.    
 
-# Installing  
+Here are some of the common commands I use.
 
-## Mac
-{% codeblock lang:bash %}
+<!--more-->
+
+
+### Installing  
+
+**Mac**
+
+````bash
 https://cloud.google.com/sdk/docs/quickstart-mac-os-x`
-{% endcodeblock %}
 
-## Linux
+````
 
-{% codeblock lang:bash %}
+**Linux**
+```bash
 # Create an environment variable for the correct distribution
 export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
 
@@ -27,60 +36,58 @@ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 
 # Update the package list and install the Cloud SDK
 sudo apt-get update && sudo apt-get install google-cloud-sdk
-{% endcodeblock %}
 
+```
 
-# Update Google Cloud Sdk
-{% codeblock lang:bash %}
-gcloud components update
-{% endcodeblock %}
+### List instances
 
-# List instances
-
-{% codeblock lang:bash %}
+```bash
 gcloud compute instances list
-{% endcodeblock %}
 
-{% asset_img  gcloud_list.png [List Instances] %}
+```
+![List Instances](gcloud_list.png)
 
-# Connecting to an Instance
 
-{% codeblock lang:bash %}
+
+### Connecting to an Instance
+```bash
 gcloud compute ssh <username>@<machine name> --zone <zone>
 
 gcloud compute ssh ubuntu@np-playground --zone us-central1-f
-{% endcodeblock %}
 
+```
 
-# Transfer File
+### Transfer File
 
-{% codeblock lang:bash %}
+```bash
 gcloud compute scp <user name>@<machine name>:<remote folder path> <local directory > --zone <zone> --recurse
 
 gcloud compute scp ubuntu@np-playground:~/data . --zone us-central1-f --recurse
-{% endcodeblock %}
 
-# Download File from GCloud
+```
 
-{% codeblock lang:bash %}
+
+### Download File from GCloud
+```bash
 gsutil -m cp -r  gs://my-bucket/remotefolder dir
-{% endcodeblock %}
+
+```
+
 
 The above command, will create a  folder "remotefolder".
 The folder dir needs to exist.
 
-If you want the files to downlaoded, without a folder
+If you want the files to downloaded, without a folder
 
-{% codeblock lang:bash %}
+```bash
 gsutil -m cp -r  gs://my-bucket/remotefolder/* dir
-{% endcodeblock %}
+
+```
 
 
-# Upload file to gcloud 
 
-{% codeblock lang:bash %}
+### Upload file to gcloud 
+```bash
 gsutil -m cp -r dir gs://my-bucket  
 
-{% endcodeblock %}
-
-Uploads the fodler dir to bucket
+```

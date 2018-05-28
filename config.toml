@@ -68,3 +68,19 @@ defaultContentLanguage = "en"
 
     # How many posts to show on the sidebar (Default: 5)
     # num_recent_posts = 5
+
+#pygmentsUseClasses = true
+#
+#PygmentsCodeFences = true
+#PygmentsStyle = "monokai"
+#pygmentsuseclasses = false
+#pygmentsStyle= "monokai"
+#pygmentsUseClassic=true
+#PygmentesStyle = "friendly"
+
+#pygmentsCodefences = true
+#pygmentsCodefencesGuessSyntax = true
+#
+#[pygmentsOptions]
+#    linenos = true
+#    linenostart = 5

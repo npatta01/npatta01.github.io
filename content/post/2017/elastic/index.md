@@ -5,26 +5,36 @@ date: 2017-09-24
 ---
 
 Elasticsearch is a search engine ideal for full text search. 
-Lot of companies use it to fully or partially power their search and autocomplete features on their platform.  To get an idea of which comp"
 
-      
-Elasticsearch is a search engine ideal for full text search.
+Here is an overview of key aspects.
+
+
+<!--more-->
+
+
+
+
 Lot of companies use it to fully or partially power their search and autocomplete features on their platform. 
-To get an idea of which companies are using it and how they are using it, visit <a href="https://stackshare.io/elasticsearch/in-stacks" target="_blank" rel="external">stackshare</a>.
-This tutorial will guide you in :
-- setting up elastic search
-- terminology
-- curl commands to index, update, search</li>
 
-# Setup
+To get an idea of which companies are using it and how they are using it, visit [stackshare](https://stackshare.io/elasticsearch/in-stacks) 
 
-If you plan to use a hosted offering, take a look at 
-- [Amazon’s Elastic Search](https://aws.amazon.com/elasticsearch-service/pricing/)
-- [Google Cloud Launcher](https://console.cloud.google.com/launcher/browse?q=elastic)
-- Hosting from [ElaticCo](https://www.elastic.co/cloud/as-a-service/subscriptions)  maintainers of ElasticSearch
+**Sections**    
+- [setting up elastic search]({{< relref "#setup" >}})     
+- [terminology]({{< relref "#terminology" >}})    
+- curl commands to index, update, search
 
 
-``` bash
+### Setup
+
+**Remote Hosting**
+
+If you plan to use a hosted offering, take a look at      
+- [Amazon’s Elastic Search](https://aws.amazon.com/elasticsearch-service/pricing/)       
+- [Google Cloud Launcher](https://console.cloud.google.com/launcher/browse?q=elastic)       
+- Hosting from [ElaticCo](https://www.elastic.co/cloud/as-a-service/subscriptions)  maintainers of ElasticSearch    
+
+**Using Docker**
+```bash
 docker pull docker.elastic.co/elasticsearch/elasticsearch:5.6.0
 # folder that we are going to save elastic search data locally
 mkdir esdata
@@ -32,14 +42,17 @@ docker run -p 9200:9200 -e "http.host=0.0.0.0" -e "transport.host=127.0.0.1" -v 
 
 ```
 
-without docker
+**Without Docker**
 
 ```bash
 // Linux/Mac
 wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.6.0.tar.gz
+
 // Windows
 wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.6.0.zip
+
 unzip the archive and run
+
 bin/elasticsearch
 
 ```
@@ -62,18 +75,18 @@ To verify everything is working, navigate to http://localhost:9200/. You should 
 ```
 
 
-## II. Terminology
+### Terminology
 
-### Document
+**Document**
 
-Any item that needs to be stored in elastic search.
+Any item that needs to be stored in elastic search.        
 Examples of a Document can be Artist Info, Song Info and lyrics, User Profile,News articles, Tweets.
 
 Any item that can be represented as a json , can be a document. A document is composed of multiple fields that may be indexed.
 
 Here is a sample document for
 
-```json
+```.json
 {
    "movie_id":1,
    "title":"Hidden Figures",
@@ -103,9 +116,12 @@ Once a doc is indexed, you can query on any fields. You can ask questions like
 
 
 
-## Type
-Defines the schema and mapping shared by documents. You can specify how you want to index different fields
-A index can have multiple schemas.
+**Type**   
+Defines the schema and mapping shared by documents.    
+
+You can specify how you want to index different fields.    
+
+A index can have multiple schemas.    
 If you are indexing a movie site, there would be a type for person (actor, director), movie, review.
 
 ## Indices
