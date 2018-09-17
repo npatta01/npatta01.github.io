@@ -19,6 +19,9 @@ It was a three day event of talks and tutorials.
 
 Below are some talks that I found interesting.
 
+
+<!--more-->
+
 **Nov 10**:      
 - Workshop on neural networks ([Slides](https://github.com/ebenolson/pydata2015))      
 - Mining Geo-referenced Data ([Slides](https://github.com/bmtgoncalves/Mining-Georeferenced-Data)      
