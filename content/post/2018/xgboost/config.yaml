@@ -1,0 +1,13 @@
+jobId: test_job
+labels:
+    type: tutorial
+    owner: nidhin    
+trainingInput:
+  scaleTier: BASIC
+#  masterType: complex_model_m
+#  packageUris: gs://my/trainer/path/package-0.0.0.tar.gz
+  pythonModule: example.train
+  region: us-east1
+  jobDir: gs://ableto-datateam-temp
+  runtimeVersion: 1.10
+  pythonVersion: 3.5
