@@ -1,5 +1,6 @@
 .idea
 public/
 themes/
-**/**/.DS_Store
+**/*/.DS_Store
 .DS_Store
+**/.DS_Store

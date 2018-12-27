@@ -5,12 +5,12 @@ show_comments: false
 
 ---
 
-I am data engineer at a media startup in NY.
+I am Machine Learning Engineer at a health care startup in NY.
 Previously I was a software engineer at Comcast and a Masters student in Computer Science from RIT.
 
 Learning is my goal. There are so many things I am excited to learn and share my trials and triumps.
 
-If there is something you feel that I know and would love to discus with me.
+If there is something you feel that I know and would love to discus with me, please reach out.
 
 
 

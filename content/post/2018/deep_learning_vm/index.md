@@ -1,11 +1,13 @@
 ---
 title: Deep Learning VM On Google Cloud Platform
-date: 2018-09-16
+date: 2018-11-03
 tags: 
-    - tensorflow
     - gcp
+    - fastai
+    - deep learning
 categories:
     - infrastructure
+    - deep learning
 ---
 
 In order to get started with deep learning, you need access to GPU.
@@ -89,3 +91,34 @@ ZONE=us-east1-c
 gcloud compute ssh $INSTANCE_NAME --zone ${ZONE} -- -L 8888:localhost:8080
 ```
 
+
+
+
+This is the set of commands I run to provision and update this machine
+```
+export IMAGE_FAMILY="pytorch-latest-gpu" 
+export ZONE="us-east1-c"
+export INSTANCE_TYPE="n1-highmem-8"
+export NUM_GPUS=1
+export GCP_PROJECT=np-training
+
+export INSTANCE_NAME="dl2"
+
+gcloud compute instances create $INSTANCE_NAME \
+        --zone=$ZONE \
+        --image-family=$IMAGE_FAMILY \
+        --image-project=deeplearning-platform-release \
+        --maintenance-policy=TERMINATE \
+        --accelerator="type=nvidia-tesla-k80,count=${NUM_GPUS}" \
+        --machine-type=$INSTANCE_TYPE \
+        --boot-disk-size=30GB \
+        --metadata='install-nvidia-driver=True,jupyter-user=ubuntu' \
+        --tags=deep-learning,gpu,jupyter \
+        --project ${GCP_PROJECT}
+
+
+gcloud compute --project ${GCP_PROJECT} ssh --zone=$ZONE ubuntu@$INSTANCE_NAME -- -L 8080:localhost:8080
+
+
+conda install -c fastai fastai -y
+```

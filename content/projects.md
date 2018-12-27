@@ -4,6 +4,13 @@ title: "Projects"
 
 Here are some projects I worked on
 
+Food Classifier (Mobile)
+----------------------------------
+Created a Mobile App that can correctly classify food among 101 categories.
+
+{{< youtube 7d2qFLeYvRc >}}
+
+[Android](https://play.google.com/store/apps/details?id=com.rsnp.foodclassifier) , [IOS](https://itunes.apple.com/us/app/food-classifier/id1445356461?ls=1&mt=8)      ,[Demo](https://www.youtube.com/watch?v=7d2qFLeYvRc) ,[Code](https://github.com/npatta01/mobile-deep-learning-classifier)
 
 Topic Modeling
 ----------------------------------
