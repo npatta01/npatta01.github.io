@@ -10,8 +10,10 @@ categories:
     - deep learning
 ---
 
-In order to get started with deep learning, you need access to GPU.
+In order to get started with deep learning, you need access to GPU.    
 Here are some several options to get access to a free GPU.
+<!--more-->
+
 My favorite options are:
 - [Google Collab](https://colab.research.google.com)
 - [Kaggle Kernels](https://www.kaggle.com)

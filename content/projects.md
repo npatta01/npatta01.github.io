@@ -12,6 +12,8 @@ Created a Mobile App that can correctly classify food among 101 categories.
 
 [Android](https://play.google.com/store/apps/details?id=com.rsnp.foodclassifier) , [IOS](https://itunes.apple.com/us/app/food-classifier/id1445356461?ls=1&mt=8)      ,[Demo](https://www.youtube.com/watch?v=7d2qFLeYvRc) ,[Code](https://github.com/npatta01/mobile-deep-learning-classifier)
 
+Technologies: React Native, Expo , Deep Learning (Pytorch, FastAi)
+
 Topic Modeling
 ----------------------------------
 Identified latent themes in the Super User Forum using topic Modeling
