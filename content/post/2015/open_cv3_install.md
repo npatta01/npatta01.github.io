@@ -4,7 +4,8 @@ title: Installing opencv 3.0.0 on Ubuntu 14.04
 date: 2015-08-04
 
 categories:
-- opencv
+- computer vision
+
 tags:
 - python
 - opencv
@@ -15,7 +16,8 @@ tags:
 
 I recently wanted to get opencv installed on my ubuntu machine.
 
-<!-- more -->
+<!--more-->
+
 
 I needed to install these optional dependencies.
 ```

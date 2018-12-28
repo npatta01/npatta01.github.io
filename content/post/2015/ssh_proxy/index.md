@@ -16,10 +16,9 @@ tags:
 
 Sometimes, you want to access a service running on a remote server, but there might be a firewall that does not forward the traffic to the port.
 
-A good example is Amazon ec2, where by default only ssh traffic is allowed.
-
 One way to deal with this is to create a socks proxy.
-<!-- more -->
+<!--more-->
+
 If we direct traffic from our computer, to use the proxy, we will be able to access the remote services .
 
 1) Create an ssh tunel/socks proxy

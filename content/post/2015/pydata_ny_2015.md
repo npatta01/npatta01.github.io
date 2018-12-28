@@ -9,7 +9,6 @@ tags:
 - conference
 - data science
 - python
-- new york
 
 ---
 

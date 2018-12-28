@@ -11,7 +11,8 @@ tags:
 
 ---
 Notes on setting up cuda on an ubuntu machine.
-<!-- more -->
+<!--more-->
+
 
 
 1 ) Download cuda 7.5 [deb](http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/cuda-repo-ubuntu1504-7-5-local_7.5-18_amd64.deb)

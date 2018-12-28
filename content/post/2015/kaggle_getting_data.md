@@ -13,7 +13,8 @@ tags:
 ---
 
 There might be instances where you might need to download a Kaggle dataset to another machine, possibly in an amazons ec2 instance.
-<!-- more -->
+<!--more-->
+
 In order to download the data, you need to be logged in.
 
 One solution is to  export your cookies and tell wget to use your cookies when downloading the data

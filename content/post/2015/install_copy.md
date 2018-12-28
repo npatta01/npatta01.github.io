@@ -15,7 +15,8 @@ tags:
 One service, that I like using to keep my data in sync with multiple computers is [Copy](https://www.copy.com/page/); a servcie that provides 15GB of storage
 
 Here are my notes on how to install it.
-<!-- more -->
+<!--more-->
+
 1 ) Run the below on the teminal
 ```
 sudo add-apt-repository ppa:paolorotolo/copy

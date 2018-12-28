@@ -12,6 +12,13 @@ tags:
 
 ---
 
+Wouldn't it be nice, if we could have the remote folder mounted locally so, we can edit files with a gui.
+
+One way to do such a thing is using ssfs.
+<!--more-->
+
+
+
 One way to transfer a file to a remote server is using scp.
 ```
 scp -P 22 path_to_file_locally username@domain:~/
@@ -26,10 +33,7 @@ So,
 scp  path_to_file_locally home:~/
 ```
 
-It might be nice, if we could have the remote folder mounted locally so, we can edit files with a gui.
 
-One way to do such a thing is using ssfs.
-<!-- more -->
 
 In ubuntu, you can connect
 

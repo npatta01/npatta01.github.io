@@ -1,7 +1,8 @@
 ---
 title: Guide to Elastic Search
 date: 2017-09-24
-
+tags:
+  - incomplete
 ---
 
 Elasticsearch is a search engine ideal for full text search. 

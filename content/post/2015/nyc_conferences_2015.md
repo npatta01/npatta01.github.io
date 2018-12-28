@@ -13,7 +13,8 @@ tags:
 ---
 
 Here are some upcoming conferences/events in New York that I am planning to attend.
-<!-- more -->
+<!--more-->
+
 - [Get better with data](http://getbetterwithdata.com/index.html): October 24
 Explore health care data sets as a team
 

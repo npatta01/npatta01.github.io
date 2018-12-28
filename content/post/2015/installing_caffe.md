@@ -12,7 +12,8 @@ tags:
 ---
 
 Using python 2.7/ opencv3
-<!-- more -->
+<!--more-->
+
 
 Was getting error 'undefined cv::imread'[1](https://github.com/BVLC/caffe/issues/2288)
 so, I fixed it by editing the Makefile of caffe to add  opencv_imgcodecs

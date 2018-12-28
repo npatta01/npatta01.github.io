@@ -13,7 +13,8 @@ tags:
 ---
 
 Here is my notes on how to retrieve the size of a bucket.
-<!-- more -->
+<!--more-->
+
 
 Install the program s3cmd
 

@@ -5,7 +5,12 @@ show_comments: false
 
 ---
 
-I am Machine Learning Engineer at a health care startup in NY.
+I am Machine Learning Engineer interested in Deep Learning.
+
+<!--more-->
+Currently I am working at a health care startup in NY.
+
+
 Previously I was a software engineer at Comcast and a Masters student in Computer Science from RIT.
 
 Learning is my goal. There are so many things I am excited to learn and share my trials and triumps.

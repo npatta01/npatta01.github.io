@@ -1,4 +1,16 @@
+---
+title: Decision Tree
+date: 2018-10-30
+categories:
+    - machine learning
+tags:
+    - incomplete
+description: decision tree
+---
 
+
+My notes on comparing trees
+<!--more-->
 
 Simple Decision Tree
 ```

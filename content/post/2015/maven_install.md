@@ -15,6 +15,8 @@ tags:
 
 Maven is software project management tool usually used for for JVM based projects.
 One of its features is dealing with external project dependencies similar to pip from python.
+<!--more-->
+
 
 By default, the maven that is available in ubuntu's ppa is out of date.
 

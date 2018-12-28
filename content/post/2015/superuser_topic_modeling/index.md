@@ -7,16 +7,18 @@ categories:
 - nlp
 tags:
 - nlp
-- topic-modeling
+- topic modeling
 - gensim
 
 ---
 
 
-Lets imagine you are given a dump of a user forum , or of someone's email, how do you analyze the contents?
-
+Lets imagine you are given a dump of a user forum , or of someone's email, how do you analyze the contents?        
 
 One way might be to look at top words in the whole corpus.
+
+
+<!--more-->
 
 However, looking at word counts without context might not be too meaningful. Words that co-occur together might signal a theme/concept/topic.
 
@@ -26,7 +28,7 @@ From a high level, LDA assumes a document contains a bunch of topics and each to
 
 Below is my analysis on the [SuperUser forum](http://superuser.com/) using the amazing python tool [gensim](https://radimrehurek.com/gensim/).
 
-<!-- more -->
+
 # SuperUser Analysis
 
 

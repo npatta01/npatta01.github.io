@@ -2,11 +2,9 @@
 title: Hello World
 date: 2015-06-30
 categories:
-    - site_setup
-tags:
-    - hexo
-    - blog
-    - setup
+    - infrastructure
+    - site setup
+
 description: Purpose of my blog
 ---
 

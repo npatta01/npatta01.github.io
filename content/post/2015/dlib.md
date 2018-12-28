@@ -4,7 +4,7 @@ title: Installing python dlib
 date: 2015-08-10
 
 categories:
-- vision
+- computer vision
 tags:
 - dlib
 - computer vision
@@ -15,7 +15,8 @@ tags:
 
 Here are some instructions to install it
 
-<!-- more -->
+<!--more-->
+
 - clone the repo
 ```
 git clone git@github.com:davisking/dlib.git
