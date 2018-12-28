@@ -14,6 +14,9 @@ Created a Mobile App that can correctly classify food among 101 categories.
 [Android](https://play.google.com/store/apps/details?id=com.rsnp.foodclassifier) , [IOS](https://itunes.apple.com/us/app/food-classifier/id1445356461?ls=1&mt=8)      ,[Demo](https://www.youtube.com/watch?v=7d2qFLeYvRc) ,[Code](https://github.com/npatta01/mobile-deep-learning-classifier)
 
 Technologies: React Native, Expo , Deep Learning (Pytorch, FastAi)
+ 
+
+&nbsp; 
 
 Topic Modeling
 ----------------------------------
@@ -23,6 +26,9 @@ Identified latent themes in the Super User Forum using topic Modeling
 
 
 [Slides](http://www.slideshare.net/slideshow/embed_code/key/dGQh9SJb6wKIS9), [Blog Post]({{< relref "post/2015/superuser_topic_modeling" >}}), [Code](https://github.com/npatta01/superuser-topic-modeling), [Deployed Instance](https://superuser-topic-modeling.herokuapp.com/#/topics)
+
+&nbsp; 
+
 
 Math Search Engine:
 ------------------
