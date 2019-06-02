@@ -5,7 +5,7 @@ python:
 
 env:
   global:
-    - HUGO_VERSION=0.53  # set in the environment to make it easy
+    - HUGO_VERSION=0.55.6 # set in the environment to make it easy
 
 # install hugo before the build is run; download the public
 # release, untar, and copy it to a known location
