@@ -13,7 +13,6 @@ The blog is build using [Hugo](https://gohugo.io/).
 To develop and see changes locally
 ```
 hugo server -D
-
 ```
 
 http://localhost:1313/
