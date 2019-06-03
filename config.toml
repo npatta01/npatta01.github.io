@@ -38,7 +38,10 @@ defaultContentLanguage = "en"
     url = "/projects/"
     name = "Projects"
     weight = 3
-
+  [[languages.en.menu.main]]
+    url = "/presentations/"
+    name = "Presentation"
+    weight = 4
 
 
 # Links format
