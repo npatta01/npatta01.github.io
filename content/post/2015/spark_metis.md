@@ -23,4 +23,6 @@ Full Repo  [Link](https://github.com/npatta01/spark_metis_investigation)
 
 [Slides](http://www.slideshare.net/nidhinpattaniyil/beginner-apache-spark-presentation)
 
-{% iframe https://www.slideshare.net/slideshow/embed_code/key/7t1RDQfmaRkh9N 425 355 %}
+
+{{< slideshare id="7t1RDQfmaRkh9N" >}}
+

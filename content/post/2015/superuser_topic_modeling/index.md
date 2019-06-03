@@ -151,8 +151,9 @@ There are also other [options](https://de.dariah.eu/tatom/topic_model_visualizat
 [Slide](http://www.slideshare.net/nidhinpattaniyil/topic-modelling-on-superuser-forum)
 [Code](https://github.com/npatta01/superuser-topic-modeling)
 
+{{< slideshare id="dGQh9SJb6wKIS9" >}}
 
-{% iframe https://www.slideshare.net/slideshow/embed_code/key/dGQh9SJb6wKIS9 425 355 %}
+
 
 
 

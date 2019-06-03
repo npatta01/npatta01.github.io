@@ -50,7 +50,8 @@ Deliverables
 [Slides](http://www.slideshare.net/nidhinpattaniyil/cms-open-payment-hackathon)
 [Code](https://github.com/npatta01/get-better-with-data-open-payment/)
 
-{% iframe https://www.slideshare.net/slideshow/embed_code/key/AiUnMWdNjHo3Aj 425 355 %}
+{{< slideshare id="AiUnMWdNjHo3Aj" >}}
+
 
 
 Team
