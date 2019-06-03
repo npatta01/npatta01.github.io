@@ -29,6 +29,16 @@ Identified latent themes in the Super User Forum using topic Modeling
 
 &nbsp; 
 
+MTA Analysis
+-----------------------------------
+Exploratory Analysis of New York MTA subway 
+
+
+{{< gdocs "https://docs.google.com/presentation/d/10kIfrimXCOkXesT0SaEjSIDz-ybEXrrmYapahiNoXg8/edit?usp=sharing" >}}
+
+[Slides] ( {{< ref "mta_analysis" >}})
+
+&nbsp; 
 
 Math Search Engine:
 ------------------
