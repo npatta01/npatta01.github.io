@@ -42,7 +42,10 @@ defaultContentLanguage = "en"
     url = "/presentations/"
     name = "Presentation"
     weight = 4
-
+  [[languages.en.menu.main]]
+    url = "https://npatta01.github.io/notes/"
+    name = "Notes"
+    weight = 5
 
 # Links format
 
