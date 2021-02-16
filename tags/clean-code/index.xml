@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>clean code on My Blog</title>
+    <link>https://npatta01.github.io/tags/clean-code/</link>
+    <description>Recent content in clean code on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 20 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/tags/clean-code/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Types in Python</title>
+      <link>https://npatta01.github.io/post/2018/10/types-in-python/</link>
+      <pubDate>Sat, 20 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2018/10/types-in-python/</guid>
+      <description>&lt;p&gt;Coming from languages like Java/C#, I found something missing in python.  &lt;br&gt;
+I miss defining &lt;strong&gt;types&lt;/strong&gt; for variables and methods.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

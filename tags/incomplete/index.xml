@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>incomplete on My Blog</title>
+    <link>https://npatta01.github.io/tags/incomplete/</link>
+    <description>Recent content in incomplete on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/tags/incomplete/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Guide to Elastic Search</title>
+      <link>https://npatta01.github.io/post/2017/09/guide-to-elastic-search/</link>
+      <pubDate>Sun, 24 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2017/09/guide-to-elastic-search/</guid>
+      <description>&lt;p&gt;Elasticsearch is a search engine ideal for full text search.&lt;/p&gt;
+&lt;p&gt;Here is an overview of key aspects.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

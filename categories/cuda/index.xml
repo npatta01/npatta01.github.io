@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cuda on My Blog</title>
+    <link>https://npatta01.github.io/categories/cuda/</link>
+    <description>Recent content in cuda on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 08 Aug 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/categories/cuda/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Installing cuda 7.5 on Ubuntu 15.04</title>
+      <link>https://npatta01.github.io/post/2015/08/installing-cuda-7.5-on-ubuntu-15.04/</link>
+      <pubDate>Sat, 08 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/08/installing-cuda-7.5-on-ubuntu-15.04/</guid>
+      <description>&lt;p&gt;Notes on setting up cuda on an ubuntu machine.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installing cuda 7.0 on Ubuntu 14.04</title>
+      <link>https://npatta01.github.io/post/2015/08/installing-cuda-7.0-on-ubuntu-14.04/</link>
+      <pubDate>Tue, 04 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/08/installing-cuda-7.0-on-ubuntu-14.04/</guid>
+      <description>&lt;p&gt;Using python 2.7/ opencv3&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

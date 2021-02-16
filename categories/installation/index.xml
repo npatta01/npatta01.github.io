@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>installation on My Blog</title>
+    <link>https://npatta01.github.io/categories/installation/</link>
+    <description>Recent content in installation on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Oct 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/categories/installation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Installing R-Studio on Ubuntu 15.04</title>
+      <link>https://npatta01.github.io/post/2015/10/installing-r-studio-on-ubuntu-15.04/</link>
+      <pubDate>Sun, 04 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/10/installing-r-studio-on-ubuntu-15.04/</guid>
+      <description>&lt;p&gt;Here are my notes in installing R on linux&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installing copy on Ubuntu 14.04</title>
+      <link>https://npatta01.github.io/post/2015/09/installing-copy-on-ubuntu-14.04/</link>
+      <pubDate>Fri, 11 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/09/installing-copy-on-ubuntu-14.04/</guid>
+      <description>&lt;p&gt;One service, that I like using to keep my data in sync with multiple computers is &lt;a href=&#34;https://www.copy.com/page/&#34;&gt;Copy&lt;/a&gt;; a servcie that provides 15GB of storage&lt;/p&gt;
+&lt;p&gt;Here are my notes on how to install it.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installing maven 3.3.3 on Ubuntu</title>
+      <link>https://npatta01.github.io/post/2015/08/installing-maven-3.3.3-on-ubuntu/</link>
+      <pubDate>Wed, 05 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/08/installing-maven-3.3.3-on-ubuntu/</guid>
+      <description>&lt;p&gt;Maven is software project management tool usually used for for JVM based projects.
+One of its features is dealing with external project dependencies similar to pip from python.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

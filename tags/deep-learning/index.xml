@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>deep learning on My Blog</title>
+    <link>https://npatta01.github.io/tags/deep-learning/</link>
+    <description>Recent content in deep learning on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 03 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Deep Learning VM On Google Cloud Platform</title>
+      <link>https://npatta01.github.io/post/2018/11/deep-learning-vm-on-google-cloud-platform/</link>
+      <pubDate>Sat, 03 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2018/11/deep-learning-vm-on-google-cloud-platform/</guid>
+      <description>&lt;p&gt;In order to get started with deep learning, you need access to GPU. &lt;br&gt;
+Here are some several options to get access to a free GPU.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Intro to pytorch</title>
+      <link>https://npatta01.github.io/post/2018/09/intro-to-pytorch/</link>
+      <pubDate>Sun, 16 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2018/09/intro-to-pytorch/</guid>
+      <description>&lt;p&gt;Pytorch Code snippets&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

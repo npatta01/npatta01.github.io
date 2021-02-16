@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bootcamp on My Blog</title>
+    <link>https://npatta01.github.io/tags/bootcamp/</link>
+    <description>Recent content in bootcamp on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Jul 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/tags/bootcamp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Initial Impressions on Metis</title>
+      <link>https://npatta01.github.io/post/2015/07/initial-impressions-on-metis/</link>
+      <pubDate>Mon, 06 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/07/initial-impressions-on-metis/</guid>
+      <description>&lt;p&gt;On June 29 2015, I joined a 12 week data science bootcamp &lt;a href=&#34;http://www.thisismetis.com/data-science&#34;&gt;Metis&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

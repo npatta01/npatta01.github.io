@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on My Blog</title>
+    <link>https://npatta01.github.io/tags/python/</link>
+    <description>Recent content in python on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 20 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Types in Python</title>
+      <link>https://npatta01.github.io/post/2018/10/types-in-python/</link>
+      <pubDate>Sat, 20 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2018/10/types-in-python/</guid>
+      <description>&lt;p&gt;Coming from languages like Java/C#, I found something missing in python.  &lt;br&gt;
+I miss defining &lt;strong&gt;types&lt;/strong&gt; for variables and methods.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Pydata Ny 2015 Conference</title>
+      <link>https://npatta01.github.io/post/2015/11/pydata-ny-2015-conference/</link>
+      <pubDate>Wed, 11 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/11/pydata-ny-2015-conference/</guid>
+      <description>&lt;p&gt;The big python data science conference took part on Nov 9 -11 at Bank of America.&lt;/p&gt;
+&lt;p&gt;It was a three day event of talks and tutorials.&lt;/p&gt;
+&lt;p&gt;Below are some talks that I found interesting.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installing opencv 3.0.0 on Ubuntu 14.04</title>
+      <link>https://npatta01.github.io/post/2015/08/installing-opencv-3.0.0-on-ubuntu-14.04/</link>
+      <pubDate>Tue, 04 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/08/installing-opencv-3.0.0-on-ubuntu-14.04/</guid>
+      <description>&lt;p&gt;I recently wanted to get opencv installed on my ubuntu machine.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Setting up pyspark with jupyter</title>
+      <link>https://npatta01.github.io/post/2015/08/setting-up-pyspark-with-jupyter/</link>
+      <pubDate>Sat, 01 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/08/setting-up-pyspark-with-jupyter/</guid>
+      <description>&lt;p&gt;Notes on setting up pyspark and jupyter notebook.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Setting up pyspark</title>
+      <link>https://npatta01.github.io/post/2015/07/setting-up-pyspark/</link>
+      <pubDate>Wed, 22 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/07/setting-up-pyspark/</guid>
+      <description>&lt;p&gt;Spark is a general-purpose cluster computing system.&lt;/p&gt;
+&lt;p&gt;Here are some of my notes in setting up:&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>copy on My Blog</title>
+    <link>https://npatta01.github.io/tags/copy/</link>
+    <description>Recent content in copy on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 11 Sep 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/tags/copy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Installing copy on Ubuntu 14.04</title>
+      <link>https://npatta01.github.io/post/2015/09/installing-copy-on-ubuntu-14.04/</link>
+      <pubDate>Fri, 11 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/09/installing-copy-on-ubuntu-14.04/</guid>
+      <description>&lt;p&gt;One service, that I like using to keep my data in sync with multiple computers is &lt;a href=&#34;https://www.copy.com/page/&#34;&gt;Copy&lt;/a&gt;; a servcie that provides 15GB of storage&lt;/p&gt;
+&lt;p&gt;Here are my notes on how to install it.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

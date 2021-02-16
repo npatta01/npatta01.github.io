@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>model interpretability on My Blog</title>
+    <link>https://npatta01.github.io/tags/model-interpretability/</link>
+    <description>Recent content in model interpretability on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/tags/model-interpretability/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Model Interpretability</title>
+      <link>https://npatta01.github.io/post/2019/05/model-interpretability/</link>
+      <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2019/05/model-interpretability/</guid>
+      <description>&lt;p&gt;Understanding and being able to justify what your machine learning model has learned is very important.&lt;/p&gt;
+&lt;p&gt;In this post, I cover :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;understanding model by their weights&lt;/li&gt;
+&lt;li&gt;understanding how individiual feature interact through partial dependency plots&lt;/li&gt;
+&lt;li&gt;justifying individual predictions using Shap and Lime&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

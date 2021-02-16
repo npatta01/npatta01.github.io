@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pytorch on My Blog</title>
+    <link>https://npatta01.github.io/tags/pytorch/</link>
+    <description>Recent content in pytorch on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 16 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Intro to pytorch</title>
+      <link>https://npatta01.github.io/post/2018/09/intro-to-pytorch/</link>
+      <pubDate>Sun, 16 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2018/09/intro-to-pytorch/</guid>
+      <description>&lt;p&gt;Pytorch Code snippets&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

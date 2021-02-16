@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gcp on My Blog</title>
+    <link>https://npatta01.github.io/tags/gcp/</link>
+    <description>Recent content in gcp on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 03 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/tags/gcp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Deep Learning VM On Google Cloud Platform</title>
+      <link>https://npatta01.github.io/post/2018/11/deep-learning-vm-on-google-cloud-platform/</link>
+      <pubDate>Sat, 03 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2018/11/deep-learning-vm-on-google-cloud-platform/</guid>
+      <description>&lt;p&gt;In order to get started with deep learning, you need access to GPU. &lt;br&gt;
+Here are some several options to get access to a free GPU.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

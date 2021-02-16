@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>conference on My Blog</title>
+    <link>https://npatta01.github.io/tags/conference/</link>
+    <description>Recent content in conference on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Nov 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/tags/conference/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pydata Ny 2015 Conference</title>
+      <link>https://npatta01.github.io/post/2015/11/pydata-ny-2015-conference/</link>
+      <pubDate>Wed, 11 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/11/pydata-ny-2015-conference/</guid>
+      <description>&lt;p&gt;The big python data science conference took part on Nov 9 -11 at Bank of America.&lt;/p&gt;
+&lt;p&gt;It was a three day event of talks and tutorials.&lt;/p&gt;
+&lt;p&gt;Below are some talks that I found interesting.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
