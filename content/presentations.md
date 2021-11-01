@@ -4,10 +4,29 @@ title: "Presentations"
 
 Here are some presentations that I prepared for public, colleagues and friends.
 
-Most of the presenatitions are build on top a lot of resources.
+Most of the presentations are build on top a lot of resources.
 
 
 <!--more-->
+
+Serving Pytorch Models in Production
+----------------------------------
+Presentation at Pydata 2021 
+
+{{< slideshare id="LVH2BPvK8Hkr4n" >}}
+
+
+Deploying a Mobile App on TensorFlow: Lessons Learned
+----------------------------------
+Presentation at Pydata 2021 
+
+Technologies: TensorFlow.js , React Native
+
+{{< gdocs "https://docs.google.com/presentation/d/1eS-ZlEEu9WDjo3vXkNAH3YXn5vEkB4_drarPbUVwBjA/edit?usp=sharing" >}}
+
+[Blog](https://medium.com/@reshamas/deploying-a-deep-learning-model-on-mobile-using-tensorflow-and-react-4b594fe04ab)
+
+
 
 Model Interpretability
 ----------------------------------

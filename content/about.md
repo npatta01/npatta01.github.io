@@ -8,10 +8,13 @@ show_comments: false
 I am Machine Learning Engineer interested in Deep Learning.
 
 <!--more-->
-Currently I am working at a health care startup in NY.
+Currently I am Machine Learning Engineer working at Walmart in NJ.
 
 
-Previously I was a software engineer at Comcast and a Masters student in Computer Science from RIT.
+Previously I worked as ML Engineer in a health care startup in NY and a Media Startup.
+
+
+And even before that I was a software engineer at Comcast and a Masters student in Computer Science from RIT.
 
 Learning is my goal. There are so many things I am excited to learn and share my trials and triumps.
 

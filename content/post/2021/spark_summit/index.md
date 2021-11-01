@@ -20,11 +20,11 @@ Changes:
 - support conda, pip, pipex to deploy package
 
 Shipping pacakge in conda
-![Spark deploy conda package](static/conda_deps.png)
+![Spark deploy conda package](static/conda_deps.jpg)
 
 
 - pandas Api on Spark 
-![Spark Pandas](static/spark_pandas.jpg.png)
+![Spark Pandas](static/spark_pandas.jpg)
 
 
 - visualization

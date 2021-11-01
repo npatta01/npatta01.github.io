@@ -5,6 +5,17 @@ title: "Projects"
 Here are some projects I worked on.
 <!--more-->
 
+Deploying a Mobile App on Tensorflow: Lessons Learned
+----------------------------------
+
+Created a course with Manning Publication to teach people how to productionalize and serve a Tensroflow model.
+
+[Course Url](https://www.manning.com/liveproject/deploying-a-deep-learning-model-on-web-and-mobile-applications?utm_source=dataumbrella&utm_medium=affiliate&utm_campaign=liveproject_pattaniyil_02_03_21&utm_content=published&a_aid=dataumbrella&a_bid=187b748d), [Blog](https://medium.com/@reshamas/deploying-a-deep-learning-model-on-mobile-using-tensorflow-and-react-4b594fe04ab), [Repo](https://github.com/reshamas/deploying-mobile-app)
+
+Technologies: TensorFlow.js , React Native
+
+&nbsp; 
+
 Food Classifier (Mobile)
 ----------------------------------
 Created a Mobile App that can correctly classify food among 101 categories.
