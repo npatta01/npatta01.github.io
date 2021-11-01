@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My Blog</title>
+    <link>https://npatta01.github.io/post/</link>
+    <description>Recent content in Posts on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 May 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Spark Summit 2021</title>
+      <link>https://npatta01.github.io/post/2021/05/spark-summit-2021/</link>
+      <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2021/05/spark-summit-2021/</guid>
+      <description>Project Zen: Making Data Science Easier in PySpark Project Zen Goals:
+ make spark more pythonic better ops with python libraries  Changes:
+ Python Hints better documentation support conda, pip, pipex to deploy package  Shipping pacakge in conda   pandas Api on Spark   visualization
+  Links: Project Zen Databricks Blog</description>
+    </item>
+    
+    <item>
+      <title>Scheduling Jobs</title>
+      <link>https://npatta01.github.io/post/2021/01/scheduling-jobs/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2021/01/scheduling-jobs/</guid>
+      <description>&lt;p&gt;Here is an alternative to using cron.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Intro to Streamlit</title>
+      <link>https://npatta01.github.io/post/2020/12/intro-to-streamlit/</link>
+      <pubDate>Mon, 21 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2020/12/intro-to-streamlit/</guid>
+      <description>&lt;p&gt;Streamlit is a useful framework for building interaction python apps.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Useful Kubectl Commands</title>
+      <link>https://npatta01.github.io/post/2020/06/useful-kubectl-commands/</link>
+      <pubDate>Sun, 21 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2020/06/useful-kubectl-commands/</guid>
+      <description>&lt;p&gt;Here are some common kubectl commands that I find myself using.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Model Interpretability</title>
+      <link>https://npatta01.github.io/post/2019/05/model-interpretability/</link>
+      <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2019/05/model-interpretability/</guid>
+      <description>&lt;p&gt;Understanding and being able to justify what your machine learning model has learned is very important.&lt;/p&gt;
+&lt;p&gt;In this post, I cover :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;understanding model by their weights&lt;/li&gt;
+&lt;li&gt;understanding how individiual feature interact through partial dependency plots&lt;/li&gt;
+&lt;li&gt;justifying individual predictions using Shap and Lime&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Conference Notes - Google Cloud Next 2019</title>
+      <link>https://npatta01.github.io/post/2019/04/conference-notes-google-cloud-next-2019/</link>
+      <pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2019/04/conference-notes-google-cloud-next-2019/</guid>
+      <description>&lt;p&gt;Google Cloud had their annul conference in April this year in San Francisco.
+There were a lot of cool announcements.&lt;/p&gt;
+&lt;p&gt;Here is my list of announcements that I am excited for.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Conference Notes  - MLConf 2019</title>
+      <link>https://npatta01.github.io/post/2019/03/conference-notes-mlconf-2019/</link>
+      <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2019/03/conference-notes-mlconf-2019/</guid>
+      <description>&lt;p&gt;On March, I attended the machine learning conferene &lt;a href=&#34;https://mlconf.com/blog/mlconf-nyc-2019-speaker-resources/&#34;&gt;ML Conf&lt;/a&gt; in NYC.&lt;/p&gt;
+&lt;p&gt;Here are links shared from the conferences:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.slideshare.net/SessionsEvents&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[Book Discount (40%)](&lt;a href=&#34;https://mlconf.com/blog/&#34;&gt;https://mlconf.com/blog/&lt;/a&gt;    tweet-for-a-chance-to-win-free-books-at-mlconf-nyc-this-friday/)  ctwmlconfny19&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mlconf.com/blog/mlconf-nyc-2019-speaker-resources/&#34;&gt;Speaker Resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCjeM1xxYb_37bZfyparLS3Q/videos&#34;&gt;Videos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here are a list of my favorite talks.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Deep Learning VM On Google Cloud Platform</title>
+      <link>https://npatta01.github.io/post/2018/11/deep-learning-vm-on-google-cloud-platform/</link>
+      <pubDate>Sat, 03 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2018/11/deep-learning-vm-on-google-cloud-platform/</guid>
+      <description>&lt;p&gt;In order to get started with deep learning, you need access to GPU. &lt;br&gt;
+Here are some several options to get access to a free GPU.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Types in Python</title>
+      <link>https://npatta01.github.io/post/2018/10/types-in-python/</link>
+      <pubDate>Sat, 20 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2018/10/types-in-python/</guid>
+      <description>&lt;p&gt;Coming from languages like Java/C#, I found something missing in python.  &lt;br&gt;
+I miss defining &lt;strong&gt;types&lt;/strong&gt; for variables and methods.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Intro to pytorch</title>
+      <link>https://npatta01.github.io/post/2018/09/intro-to-pytorch/</link>
+      <pubDate>Sun, 16 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2018/09/intro-to-pytorch/</guid>
+      <description>&lt;p&gt;Pytorch Code snippets&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Useful Google Cloud Commands</title>
+      <link>https://npatta01.github.io/post/2017/10/useful-google-cloud-commands/</link>
+      <pubDate>Sun, 01 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2017/10/useful-google-cloud-commands/</guid>
+      <description>&lt;p&gt;If your infrastructure is in Google Cloud , it is helpful to use the google cloud sdk.&lt;/p&gt;
+&lt;p&gt;Here are some of the common commands I use.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Guide to Elastic Search</title>
+      <link>https://npatta01.github.io/post/2017/09/guide-to-elastic-search/</link>
+      <pubDate>Sun, 24 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2017/09/guide-to-elastic-search/</guid>
+      <description>&lt;p&gt;Elasticsearch is a search engine ideal for full text search.&lt;/p&gt;
+&lt;p&gt;Here is an overview of key aspects.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Pydata Ny 2015 Conference</title>
+      <link>https://npatta01.github.io/post/2015/11/pydata-ny-2015-conference/</link>
+      <pubDate>Wed, 11 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/11/pydata-ny-2015-conference/</guid>
+      <description>&lt;p&gt;The big python data science conference took part on Nov 9 -11 at Bank of America.&lt;/p&gt;
+&lt;p&gt;It was a three day event of talks and tutorials.&lt;/p&gt;
+&lt;p&gt;Below are some talks that I found interesting.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Get Better With Data 2015</title>
+      <link>https://npatta01.github.io/post/2015/11/get-better-with-data-2015/</link>
+      <pubDate>Mon, 09 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/11/get-better-with-data-2015/</guid>
+      <description>&lt;p&gt;On November 7-8, there was a hackathon in NY focused on analyzing the health care data.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Topic Modeling on the Super User Forum</title>
+      <link>https://npatta01.github.io/post/2015/10/topic-modeling-on-the-super-user-forum/</link>
+      <pubDate>Fri, 23 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/10/topic-modeling-on-the-super-user-forum/</guid>
+      <description>&lt;p&gt;Lets imagine you are given a dump of a user forum , or of someone&amp;rsquo;s email, how do you analyze the contents?&lt;/p&gt;
+&lt;p&gt;One way might be to look at top words in the whole corpus.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Upcoming NYC Conferences/Events</title>
+      <link>https://npatta01.github.io/post/2015/10/upcoming-nyc-conferences/events/</link>
+      <pubDate>Thu, 15 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/10/upcoming-nyc-conferences/events/</guid>
+      <description>&lt;p&gt;Here are some upcoming conferences/events in New York that I am planning to attend.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Texata 2015 Big Data Competition</title>
+      <link>https://npatta01.github.io/post/2015/10/texata-2015-big-data-competition/</link>
+      <pubDate>Sun, 11 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/10/texata-2015-big-data-competition/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.texata.com/&#34;&gt;Texata&lt;/a&gt; is a big data competition held yearly in Texas. 2015 is the second year that the event is being held.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spark Simple Analysis</title>
+      <link>https://npatta01.github.io/post/2015/10/spark-simple-analysis/</link>
+      <pubDate>Mon, 05 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/10/spark-simple-analysis/</guid>
+      <description>&lt;p&gt;During my Metis bootcamp,  I did an intro presentation to my class about spark.&lt;/p&gt;
+&lt;p&gt;The presentation explored the content and length of a sample of the commit messages on github.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installing R-Studio on Ubuntu 15.04</title>
+      <link>https://npatta01.github.io/post/2015/10/installing-r-studio-on-ubuntu-15.04/</link>
+      <pubDate>Sun, 04 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/10/installing-r-studio-on-ubuntu-15.04/</guid>
+      <description>&lt;p&gt;Here are my notes in installing R on linux&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installing copy on Ubuntu 14.04</title>
+      <link>https://npatta01.github.io/post/2015/09/installing-copy-on-ubuntu-14.04/</link>
+      <pubDate>Fri, 11 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/09/installing-copy-on-ubuntu-14.04/</guid>
+      <description>&lt;p&gt;One service, that I like using to keep my data in sync with multiple computers is &lt;a href=&#34;https://www.copy.com/page/&#34;&gt;Copy&lt;/a&gt;; a servcie that provides 15GB of storage&lt;/p&gt;
+&lt;p&gt;Here are my notes on how to install it.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SSH Mount remote system</title>
+      <link>https://npatta01.github.io/post/2015/09/ssh-mount-remote-system/</link>
+      <pubDate>Wed, 02 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/09/ssh-mount-remote-system/</guid>
+      <description>&lt;p&gt;Wouldn&amp;rsquo;t it be nice, if we could have the remote folder mounted locally so, we can edit files with a gui.&lt;/p&gt;
+&lt;p&gt;One way to do such a thing is using ssfs.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SSH Config file</title>
+      <link>https://npatta01.github.io/post/2015/09/ssh-config-file/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/09/ssh-config-file/</guid>
+      <description>&lt;p&gt;SSH Config file is a way to manage your manage your ssh connections.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Optimizing import large sql dump</title>
+      <link>https://npatta01.github.io/post/2015/08/optimizing-import-large-sql-dump/</link>
+      <pubDate>Tue, 18 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/08/optimizing-import-large-sql-dump/</guid>
+      <description>&lt;p&gt;I recently wanted to import a large dump of github data provided by ghtorrent[http://ghtorrent.org/] .&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installing python dlib</title>
+      <link>https://npatta01.github.io/post/2015/08/installing-python-dlib/</link>
+      <pubDate>Mon, 10 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/08/installing-python-dlib/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://dlib.net/&#34;&gt;Dlib&lt;/a&gt; is C++ machine learning library&lt;/p&gt;
+&lt;p&gt;Here are some instructions to install it&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installing cuda 7.5 on Ubuntu 15.04</title>
+      <link>https://npatta01.github.io/post/2015/08/installing-cuda-7.5-on-ubuntu-15.04/</link>
+      <pubDate>Sat, 08 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/08/installing-cuda-7.5-on-ubuntu-15.04/</guid>
+      <description>&lt;p&gt;Notes on setting up cuda on an ubuntu machine.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installing maven 3.3.3 on Ubuntu</title>
+      <link>https://npatta01.github.io/post/2015/08/installing-maven-3.3.3-on-ubuntu/</link>
+      <pubDate>Wed, 05 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/08/installing-maven-3.3.3-on-ubuntu/</guid>
+      <description>&lt;p&gt;Maven is software project management tool usually used for for JVM based projects.
+One of its features is dealing with external project dependencies similar to pip from python.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installing cuda 7.0 on Ubuntu 14.04</title>
+      <link>https://npatta01.github.io/post/2015/08/installing-cuda-7.0-on-ubuntu-14.04/</link>
+      <pubDate>Tue, 04 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/08/installing-cuda-7.0-on-ubuntu-14.04/</guid>
+      <description>&lt;p&gt;Using python 2.7/ opencv3&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installing opencv 3.0.0 on Ubuntu 14.04</title>
+      <link>https://npatta01.github.io/post/2015/08/installing-opencv-3.0.0-on-ubuntu-14.04/</link>
+      <pubDate>Tue, 04 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/08/installing-opencv-3.0.0-on-ubuntu-14.04/</guid>
+      <description>&lt;p&gt;I recently wanted to get opencv installed on my ubuntu machine.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Setting up pyspark with jupyter</title>
+      <link>https://npatta01.github.io/post/2015/08/setting-up-pyspark-with-jupyter/</link>
+      <pubDate>Sat, 01 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/08/setting-up-pyspark-with-jupyter/</guid>
+      <description>&lt;p&gt;Notes on setting up pyspark and jupyter notebook.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Kaggle Downloading Data</title>
+      <link>https://npatta01.github.io/post/2015/07/kaggle-downloading-data/</link>
+      <pubDate>Wed, 29 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/07/kaggle-downloading-data/</guid>
+      <description>&lt;p&gt;There might be instances where you might need to download a Kaggle dataset to another machine, possibly in an amazons ec2 instance.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Retrieving the size of s3 bucket</title>
+      <link>https://npatta01.github.io/post/2015/07/retrieving-the-size-of-s3-bucket/</link>
+      <pubDate>Thu, 23 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/07/retrieving-the-size-of-s3-bucket/</guid>
+      <description>&lt;p&gt;Here is my notes on how to retrieve the size of a bucket.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mounting S3 bucket</title>
+      <link>https://npatta01.github.io/post/2015/07/mounting-s3-bucket/</link>
+      <pubDate>Wed, 22 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/07/mounting-s3-bucket/</guid>
+      <description>&lt;p&gt;Here is my notes on how to mount an s3 bucket as a file system.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Setting up pyspark</title>
+      <link>https://npatta01.github.io/post/2015/07/setting-up-pyspark/</link>
+      <pubDate>Wed, 22 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/07/setting-up-pyspark/</guid>
+      <description>&lt;p&gt;Spark is a general-purpose cluster computing system.&lt;/p&gt;
+&lt;p&gt;Here are some of my notes in setting up:&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SSH Tunneling</title>
+      <link>https://npatta01.github.io/post/2015/07/ssh-tunneling/</link>
+      <pubDate>Wed, 22 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/07/ssh-tunneling/</guid>
+      <description>&lt;p&gt;Sometimes, you want to access a service running on a remote server, but there might be a firewall that does not forward the traffic to the port.&lt;/p&gt;
+&lt;p&gt;One way to deal with this is to create a socks proxy.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MTA Analysis</title>
+      <link>https://npatta01.github.io/post/2015/07/mta-analysis/</link>
+      <pubDate>Sun, 19 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/07/mta-analysis/</guid>
+      <description>&lt;p&gt;Identify ideal place and time to distribute flyers to NY residents using New York Subway data.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Initial Impressions on Metis</title>
+      <link>https://npatta01.github.io/post/2015/07/initial-impressions-on-metis/</link>
+      <pubDate>Mon, 06 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/07/initial-impressions-on-metis/</guid>
+      <description>&lt;p&gt;On June 29 2015, I joined a 12 week data science bootcamp &lt;a href=&#34;http://www.thisismetis.com/data-science&#34;&gt;Metis&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://npatta01.github.io/post/2015/06/hello-world/</link>
+      <pubDate>Tue, 30 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/06/hello-world/</guid>
+      <description>&lt;p&gt;This is my first post, how exciting!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://npatta01.github.io/post/1/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/1/01/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

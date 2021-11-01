@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ec2 on My Blog</title>
+    <link>https://npatta01.github.io/tags/ec2/</link>
+    <description>Recent content in ec2 on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Jul 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/tags/ec2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Retrieving the size of s3 bucket</title>
+      <link>https://npatta01.github.io/post/2015/07/retrieving-the-size-of-s3-bucket/</link>
+      <pubDate>Thu, 23 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/07/retrieving-the-size-of-s3-bucket/</guid>
+      <description>&lt;p&gt;Here is my notes on how to retrieve the size of a bucket.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SSH Tunneling</title>
+      <link>https://npatta01.github.io/post/2015/07/ssh-tunneling/</link>
+      <pubDate>Wed, 22 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/07/ssh-tunneling/</guid>
+      <description>&lt;p&gt;Sometimes, you want to access a service running on a remote server, but there might be a firewall that does not forward the traffic to the port.&lt;/p&gt;
+&lt;p&gt;One way to deal with this is to create a socks proxy.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

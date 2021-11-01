@@ -1,0 +1,342 @@
+
+
+### number of trips in 2013
+
+```
+SELECT count(*) FROM [imjasonh-storage:nyctaxi.trip_data]
+```
+
+187,287,452
+
+
+
+### total fares and tips in the cab business:
+
+```
+SELECT SUM(FLOAT(Fare_amount)) total_fare , sum(FLOAT(Tip_amount)  ) total_tip
+FROM
+  [imjasonh-storage:nyctaxi.trip_fare]
+
+  Row	total_fare	total_tip	 
+  1	2.3183346097299995E9	2.565179594200286E8	 
+```
+
+### Number of Unique medallions and unique drivers  recorded in the data
+```
+SELECT COUNT(DISTINCT(medallion)) unique_medallions, COUNT(DISTINCT(hack_license)) unique_hacklicense
+FROM
+  [imjasonh-storage:nyctaxi.trip_data]
+
+unique_medallions	unique_hacklicense	 
+13742	42822	 
+
+```
+
+### looking at active drivers and medallions per day
+```
+SELECT COUNT(DISTINCT(medallion)) unique_medallions
+, COUNT(DISTINCT(hack_license)) unique_hacklicense
+, DAYOFYEAR(pickup_datetime) as day_of_year
+FROM
+  [imjasonh-storage:nyctaxi.trip_data]
+GROUP BY  day_of_year
+ORDER BY unique_hacklicense DESC
+
+Row	unique_medallions	unique_hacklicense	day_of_year	 
+91	12753	25099	303	 
+92	12708	25089	318	 
+93	12771	25089	31	 
+94	12723	25089	134
+
+Not all medallions and drivers are on the road.
+Could this indicate hoarding ? Or licesenses allocated for something else
+```
+
+
+### Active hours
+```
+SELECT HOUR(pickup_datetime) hour_picked
+, COUNT(*) num_trips
+
+FROM
+  [imjasonh-storage:nyctaxi.trip_data]
+GROUP BY  hour_picked
+ORDER BY num_trips DESC
+
+Row	hour_picked	num_trips	 
+1	19	10857769	 
+2	18	10382600	 
+3	20	10276067	 
+4	21	10067859	 
+5	22	9767443	 
+6	14	8683102	 
+7	23	8654280	 
+8	12	8506697	 
+9	17	8436322	 
+```
+So, the most active hours are after 5pm
+
+
+
+### Trips by day of week
+```
+SELECT DAYOFWEEK(pickup_datetime) day_week
+, COUNT(*) num_trips
+
+FROM
+  [imjasonh-storage:nyctaxi.trip_data]
+GROUP BY  day_week
+ORDER BY num_trips DESC
+
+Row	day_week	num_trips	 
+1	6	26392330	 
+2	7	26240921	 
+3	5	25571631	 
+4	4	24985570	 
+5	3	24667958	 
+6	1	22927007	 
+7	2	22394342	 
+
+```
+A lot more activity during the weekends
+
+
+### Average trip time
+```
+SELECT AVG(trip_distance) avg_distance, AVG(trip_time_in_secs)/60  avg_time_in_minutes, COUNT(*) trips
+FROM [imjasonh-storage:nyctaxi.trip_data]
+
+
+```
+"avg_distance": "8.305137242742129",
+"avg_time_in_minutes": "13.533332361606993",
+"trips": "173179759"
+
+
+### Distribution of passengers
+```
+SELECT
+  INTEGER(passenger_count) AS passengers, count(*) trips
+FROM
+  [imjasonh-storage:nyctaxi.trip_data]
+GROUP BY
+  passengers
+ORDER BY
+  passengers;
+
+  Row	passengers	trips	 
+  1	0	5035	 
+  2	1	121959711	 
+  3	2	23517494	 
+  4	3	7315829	 
+  5	4	3582103	 
+  6	5	10034696	 
+  7	6	6764789	 
+  8	7	35	 
+  9	8	25	 
+  10	9	26	 
+  11	129	1	 
+  12	208	13	 
+  13	255	2	 
+
+```
+
+Values higher than 6 doesn't seem right.
+Lot of rides with one passengers as expected.
+
+
+
+
+### Patterns in tipping behaviour
+```
+
+SELECT INTEGER(ROUND(FLOAT(tip_amount) / FLOAT(fare_amount) * 100)) as tip_pct,
+  count(*) trips
+FROM [imjasonh-storage:nyctaxi.trip_fare]
+WHERE payment_type='CRD' and float(fare_amount) > 0.00
+GROUP BY tip_pct
+ORDER BY tip_pct
+```
+
+```
+[
+  {
+    "tip_pct": "0",
+    "trips": "3227816"
+  },
+  {
+    "tip_pct": "1",
+    "trips": "78606"
+  },
+  {
+    "tip_pct": "2",
+    "trips": "57945"
+  },
+  {
+    "tip_pct": "3",
+    "trips": "75351"
+  },
+  {
+    "tip_pct": "4",
+    "trips": "199571"
+  },
+  {
+    "tip_pct": "5",
+    "trips": "394763"
+  },
+  {
+    "tip_pct": "6",
+    "trips": "732748"
+  },
+  {
+    "tip_pct": "7",
+    "trips": "1001344"
+  },
+  {
+    "tip_pct": "8",
+    "trips": "1395657"
+  },
+  {
+    "tip_pct": "9",
+    "trips": "1516062"
+  },
+  {
+    "tip_pct": "10",
+    "trips": "2296492"
+  },
+  {
+    "tip_pct": "11",
+    "trips": "2813566"
+  },
+  {
+    "tip_pct": "12",
+    "trips": "2020426"
+  },
+  {
+    "tip_pct": "13",
+    "trips": "3641555"
+  },
+  {
+    "tip_pct": "14",
+    "trips": "2638662"
+  },
+  {
+    "tip_pct": "15",
+    "trips": "2659690"
+  }
+]
+```
+There are some very high tip percents (>30%), probably bad data.
+The data is as expected
+
+
+### drop off/ pickup locations
+```
+SELECT ROUND(FLOAT(dropoff_longitude),2) drop_off_longitude
+,ROUND(FLOAT(dropoff_latitude),2) drop_off_latitude
+,ROUND(FLOAT(pickup_longitude),2) pickup_longitude
+,ROUND(FLOAT(pickup_latitude),2) pickup_latitude
+,HOUR(pickup_datetime) hour_day
+,COUNT(*) as num_trips
+
+FROM
+  [imjasonh-storage:nyctaxi.trip_data]
+GROUP BY hour_day,drop_off_longitude,drop_off_latitude,pickup_longitude,pickup_latitude
+
+
+```
+(Trying  to create cartodb visualization)
+
+
+### How much trips were unpaid
+```
+SELECT Payment_type
+, count(*) as nonpayments
+
+FROM
+  [imjasonh-storage:nyctaxi.trip_fare]
+  WHERE Payment_type NOT IN ( 'CSH', 'CRD' )
+GROUP BY Payment_type
+
+Row	Payment_type	nonpayments	 
+1	UNK	227537	 
+2	NOC	435433	 
+3	DIS	137640	 
+
+```
+A decent amount of non payment
+
+
+
+### Is non payments by hour
+
+```
+SELECT Payment_type
+,HOUR(pickup_datetime) hour_day
+, count(*) as non_payments
+
+FROM
+  [imjasonh-storage:nyctaxi.trip_fare]
+  WHERE Payment_type NOT IN ( 'CSH', 'CRD' )
+GROUP BY Payment_type,hour_day
+
+Row	Payment_type	hour_day	non_payments	 
+1	NOC	4	12868	 
+2	DIS	0	6921	 
+3	UNK	18	14817	 
+4	NOC	13	19366	 
+5	NOC	9	15029	 
+6	UNK	2	3307	 
+7	UNK	4	1691
+
+So, there are some unknown payments at 6pm and no charges at 1pm.
+But I think the more interesting/troublesome for a driver is No charges at 2am and disputes at 12 in the morning
+
+```
+### Locations of activity at 12 am - 2am
+```
+SELECT
+HOUR(pickup_datetime) as hour_day
+,ROUND(FLOAT(pickup_longitude),2) pickup_longitude
+,ROUND(FLOAT(pickup_latitude),2) pickup_latitude
+
+, count(*) as non_payments
+
+FROM
+  [imjasonh-storage:nyctaxi.trip_data]
+WHERE HOUR(pickup_datetime) IN ( 0,1,2 )
+GROUP BY hour_day,pickup_longitude,pickup_latitude
+
+
+Row	hour_day	pickup_longitude	pickup_latitude	non_payments	 
+1	0	-74.0	40.73	337444	 
+2	0	-74.0	40.74	258231	 
+3	2	-73.99	40.75	154147	 
+
+There is a lot of activity near those coordinates
+
+```
+### How far do people drive
+```
+SELECT
+
+INTEGER(FLOAT(trip_distance)) distance
+, count(*) as trips
+
+FROM
+  [imjasonh-storage:nyctaxi.trip_data]
+WHERE INTEGER(FLOAT(trip_distance)) <200
+GROUP BY distance
+ORDER BY trips DESC
+
+
+Row	distance	trips	 
+1	1	57584143	 
+2	0	37674632	 
+3	2	30042463	 
+4	3	15497927	 
+
+Lot of under 5 miles
+
+
+```

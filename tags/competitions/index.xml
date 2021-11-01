@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>competitions on My Blog</title>
+    <link>https://npatta01.github.io/tags/competitions/</link>
+    <description>Recent content in competitions on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Oct 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/tags/competitions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Texata 2015 Big Data Competition</title>
+      <link>https://npatta01.github.io/post/2015/10/texata-2015-big-data-competition/</link>
+      <pubDate>Sun, 11 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/10/texata-2015-big-data-competition/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.texata.com/&#34;&gt;Texata&lt;/a&gt; is a big data competition held yearly in Texas. 2015 is the second year that the event is being held.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

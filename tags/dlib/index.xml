@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dlib on My Blog</title>
+    <link>https://npatta01.github.io/tags/dlib/</link>
+    <description>Recent content in dlib on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Aug 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/tags/dlib/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Installing python dlib</title>
+      <link>https://npatta01.github.io/post/2015/08/installing-python-dlib/</link>
+      <pubDate>Mon, 10 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/08/installing-python-dlib/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://dlib.net/&#34;&gt;Dlib&lt;/a&gt; is C++ machine learning library&lt;/p&gt;
+&lt;p&gt;Here are some instructions to install it&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

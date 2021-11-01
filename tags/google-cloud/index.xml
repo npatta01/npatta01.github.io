@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>google-cloud on My Blog</title>
+    <link>https://npatta01.github.io/tags/google-cloud/</link>
+    <description>Recent content in google-cloud on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Oct 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/tags/google-cloud/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Useful Google Cloud Commands</title>
+      <link>https://npatta01.github.io/post/2017/10/useful-google-cloud-commands/</link>
+      <pubDate>Sun, 01 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2017/10/useful-google-cloud-commands/</guid>
+      <description>&lt;p&gt;If your infrastructure is in Google Cloud , it is helpful to use the google cloud sdk.&lt;/p&gt;
+&lt;p&gt;Here are some of the common commands I use.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

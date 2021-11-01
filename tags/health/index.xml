@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>health on My Blog</title>
+    <link>https://npatta01.github.io/tags/health/</link>
+    <description>Recent content in health on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 09 Nov 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/tags/health/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Get Better With Data 2015</title>
+      <link>https://npatta01.github.io/post/2015/11/get-better-with-data-2015/</link>
+      <pubDate>Mon, 09 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/11/get-better-with-data-2015/</guid>
+      <description>&lt;p&gt;On November 7-8, there was a hackathon in NY focused on analyzing the health care data.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

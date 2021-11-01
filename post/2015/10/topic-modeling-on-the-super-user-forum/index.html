@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Topic Modeling on the Super User Forum" />
+<meta property="og:description" content="Lets imagine you are given a dump of a user forum , or of someone&rsquo;s email, how do you analyze the contents?
+One way might be to look at top words in the whole corpus." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://npatta01.github.io/post/2015/10/topic-modeling-on-the-super-user-forum/" />
+<meta property="article:published_time" content="2015-10-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2015-10-23T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Topic Modeling on the Super User Forum"/>
+<meta name="twitter:description" content="Lets imagine you are given a dump of a user forum , or of someone&rsquo;s email, how do you analyze the contents?
+One way might be to look at top words in the whole corpus."/>
+
+
+
+    <link rel="canonical" href="https://npatta01.github.io/post/2015/10/topic-modeling-on-the-super-user-forum/">
+
+    <title>
+      
+        Topic Modeling on the Super User Forum | My Blog
+      
+    </title>
+
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <link href="https://npatta01.github.io/css/style.css" rel="stylesheet">
+
+    
+
+    
+
+    
+
+
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+  </head>
+  <body>
+    
+      <header class="blog-header">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+            <img src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top"
+    alt="">
+My Blog
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <ul class="navbar-nav">
+                
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/about/">About</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/projects/">Projects</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/presentations/">Presentation</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/notes/">Notes</a>
+                </li>
+                
+            </ul>
+            
+        </div>
+    </nav>
+</header>
+    
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-8 blog-main">
+
+          
+
+<header>
+    <h2 class="blog-post-title">
+        <a class="text-dark" href="/post/2015/10/topic-modeling-on-the-super-user-forum/">Topic Modeling on the Super User Forum</a>
+    </h2>
+    
+
+
+<div class="blog-post-date text-secondary">
+    
+        Oct 23, 2015
+    
+
+</div>
+
+    
+<div class="blog-post-tags text-secondary">
+    <strong>Tags:</strong>
+    
+        <a class="badge badge-primary" href="/tags/nlp">nlp</a>
+    
+        <a class="badge badge-primary" href="/tags/topic-modeling">topic modeling</a>
+    
+        <a class="badge badge-primary" href="/tags/gensim">gensim</a>
+    
+</div>
+
+    
+<div class="blog-post-categories text-secondary">
+    <strong>Categories:</strong>
+    
+        <a class="badge badge-primary" href="/categories/nlp">nlp</a>
+    
+</div>
+
+    <hr>
+</header>
+<article class="blog-post">
+    <p>Lets imagine you are given a dump of a user forum , or of someone&rsquo;s email, how do you analyze the contents?</p>
+<p>One way might be to look at top words in the whole corpus.</p>
+<p>However, looking at word counts without context might not be too meaningful. Words that co-occur together might signal a theme/concept/topic.</p>
+<p>In the world of natural language processing, there is technique called <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation">Latent Dirichlet Allocation</a>.</p>
+<p>From a high level, LDA assumes a document contains a bunch of topics and each topic contains a bunch of words that co-occur.</p>
+<p>Below is my analysis on the <a href="http://superuser.com/">SuperUser forum</a> using the amazing python tool <a href="https://radimrehurek.com/gensim/">gensim</a>.</p>
+<h1 id="superuser-analysis">SuperUser Analysis</h1>
+<p>I asked gensim to build a model that tried to find 8 topics. Here are the topics it learned.</p>
+<h2 id="topics">Topics</h2>
+<p>Here is are 8 topics it learned.</p>
+<ul>
+<li>file,files,text,like</li>
+<li>network, server,router,connection</li>
+<li>windows, screen , problem, time</li>
+<li>card, device, usb, driver</li>
+<li>windows user, folder, account</li>
+<li>drive, windows, disk, boot</li>
+<li>would, like, data, excel</li>
+<li>error, command, file, root</li>
+</ul>
+<p>Looking at the list of top words, it can be difficult to assign a label.</p>
+<h2 id="labels">Labels</h2>
+<p>After looking at just the words, it can be difficult to assign a label.</p>
+<p>One way to identify the labels, is look at documents that score the highest for a topic and assign a label.
+After looking at several sample docs, here are the labels and sample question titles for the strongest docs.</p>
+<ul>
+<li>
+<p><em>Word Woes</em>
+<a href="http://superuser.com/questions/158626">Automatically resize picture/image in Word</a>
+<a href="http://superuser.com/questions/654436">Word 2010 generated PDF: corrupted copy-paste and search text</a></p>
+</li>
+<li>
+<p><em>Networking Woes</em>
+<a href="http://superuser.com/questions/493823">How can I set a static ip address on a DHCP network?</a>
+<a href="http://superuser.com/questions/795133">Getting LAN clients to use IPv6 tunnel of Debian router</a></p>
+</li>
+<li>
+<p><em>Display Woes</em>
+<a href="http://superuser.com/questions/491258">How can I display the Windows 8 Start Screen on a secondary monitor?</a>
+<a href="http://superuser.com/questions/753259">How do I force prompts to display on my primary monitor in Windows?</a></p>
+</li>
+<li>
+<p><em>Computer Concerns</em>
+<a href="http://superuser.com/questions/490589/lshw-tells-me-my-processor-is-a-64-bits-but-my-motherboard-has-a-32-bits-width">lshw tells me my processor is a 64 bits but my motherboard has a 32 bits width</a>
+<a href="http://superuser.com/questions/697903/nvidia-8500gt-wont-display-video-on-asus-m2a-vm">Nvidia 8500GT Won&rsquo;t display video on Asus M2A-VM</a></p>
+</li>
+<li>
+<p><em>Outlook/ Email Woes</em>
+<a href="http://superuser.com/questions/36907/making-msn-explorer-the-default-email-program-on-vista">Making MSN Explorer the default email program on Vista</a>
+<a href="http://superuser.com/questions/796598/outlook-2010-send-address-not-defaulting-selected-inbox">Outlook 2010 send address not defaulting selected inbox</a></p>
+</li>
+<li>
+<p><em>Partition Woes</em>
+[Windows install on GPT with multiple drives](Windows install on GPT with multiple drives)
+<a href="http://superuser.com/questions/625077/how-to-remove-an-old-windows-installation-that-is-inside-the-system-partition">How to remove an old windows installation that is inside the System partition?</a></p>
+</li>
+<li>
+<p><em>Excel/ Word Hacks</em>
+<a href="http://superuser.com/questions/748449/representing-specific-data-from-a-dynamic-database-array-in-excel">Representing Specific Data from a Dynamic Database (Array) in Excel</a>
+<a href="http://superuser.com/questions/789091/excel-table-copy-wrong-formula-with-newly-inserted-rows">http://superuser.com/questions/789091/excel-table-copy-wrong-formula-with-newly-inserted-rows</a></p>
+</li>
+<li>
+<p><em>Video Woes</em>
+<a href="http://superuser.com/questions/396834/cant-get-ffmpeg-to-use-frei0r-on-osx-through-homebrew">Can&rsquo;t get ffmpeg to use frei0r on OSX (through homebrew)</a>
+<a href="http://superuser.com/questions/479063/ffmpeg-pipe-input-error">ffmpeg: Pipe input error</a></p>
+</li>
+</ul>
+<h2 id="new-instance">New instance</h2>
+<p>Now that we have a topic model, lets see how it works for identifying topics for an unseen document.</p>
+<p>{% blockquote outlook separation of 2 email accounts <a href="http://superuser.com/questions/991960/outlook-separation-of-2-email-accounts">http://superuser.com/questions/991960/outlook-separation-of-2-email-accounts</a> %}
+I have 2 email accounts on outlook : account A and account B.</p>
+<p>When i send a message or receive any msg on account B, the same msg appears on account A. As far as account A is concerned, when i send any msg from this account or when i receive sth, it doesn&rsquo;t appear on the account B.</p>
+<p>i would like separate these 2 accounts so that they work independently.</p>
+<p>I was looking for an answer and i found that it shouldn&rsquo;t be set on outlook but on <a href="http://www.windowslive.fr/livemail/">http://www.windowslive.fr/livemail/</a> .</p>
+<p>If you have any suggestions how to do it or any advice, I would be very greatful!
+{% endblockquote %}</p>
+<p>Result:</p>
+<p>Outlook/Email Woes (0.85)
+Excel/Word hacks (0.08)
+Video Woes (0.05)</p>
+<p>From the result, we see that the strongest topic (Email) best describes the email.</p>
+<p>However, we see that the two other strongest topics don&rsquo;t really describe the document.</p>
+<p>This is most likely due to the model not trained enough or me coming from the label.</p>
+<h2 id="visualizations">Visualizations</h2>
+<p>I have deployed an instance of the site <a href="https://superuser-topic-modeling.herokuapp.com/">here</a>.</p>
+<p><em>Visualize all the topics and the top 4 words in them</em>
+{% asset_img  topics.png [Topics] %}</p>
+<p><em>Visualize the words in a topic as a word cloud, and top docs for a topic</em>
+{% asset_img  topic.png [Analysis on topic] %}</p>
+<p><em>Visualize the distribution of topics cross the corpus and similarities among topics</em>
+{% asset_img  pca.png [Topic PCA] %}</p>
+<p><em>Analyze a new document</em>
+{% asset_img  analyze.png [Analyze new topic] %}</p>
+<h1 id="things-i-need-to-learn-more">Things I need to learn more</h1>
+<h2 id="evaluating-model">Evaluating Model</h2>
+<p>How to evaluate if the model has converged. How to evaluate if the number of topic is correct.
+One approach seems to be <a href="http://qpleple.com/perplexity-to-evaluate-topic-models/">Topic perplexity</a>.</p>
+<h2 id="visualizing-topics">Visualizing topics</h2>
+<p><a href="https://github.com/benmarwick/LDAviz">Ldaviz</a> implements some nice visualizations for visualizing the topic space. Need to understand that model better.</p>
+<p>There are also other <a href="https://de.dariah.eu/tatom/topic_model_visualization.html">options</a></p>
+<h1 id="links">Links</h1>
+<p><a href="https://superuser-topic-modeling.herokuapp.com">Deployed Site</a>
+<a href="http://www.slideshare.net/nidhinpattaniyil/topic-modelling-on-superuser-forum">Slide</a>
+<a href="https://github.com/npatta01/superuser-topic-modeling">Code</a></p>
+<iframe
+  style="width: 100%; height: 500px;" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+  src="http://www.slideshare.net/slideshow/embed_code/key/dGQh9SJb6wKIS9?rel=0" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe>
+<br><br>
+<h1 id="references">References</h1>
+<p><a href="https://radimrehurek.com/gensim/">gensim</a>
+<a href="https://github.com/bmabey/pyLDAvis">pyLDAvis</a></p>
+
+    
+
+    
+
+
+</article>
+
+
+
+        </div>
+
+        <aside class="col-12 col-lg-3 ml-auto blog-sidebar">
+    
+        
+
+
+<section>
+    <h4>Recent Posts</h4>
+    <ol class="list-unstyled">
+        
+        <li>
+            <a href="/post/">Posts</a>
+        </li>
+        
+        <li>
+            <a href="/post/2021/05/spark-summit-2021/">Spark Summit 2021</a>
+        </li>
+        
+        <li>
+            <a href="/post/2021/01/scheduling-jobs/">Scheduling Jobs</a>
+        </li>
+        
+        <li>
+            <a href="/post/2020/12/intro-to-streamlit/">Intro to Streamlit</a>
+        </li>
+        
+        <li>
+            <a href="/post/2020/06/useful-kubectl-commands/">Useful Kubectl Commands</a>
+        </li>
+        
+    </ol>
+</section>
+
+    
+    
+        <section>
+    
+        
+    
+        
+        <h4>Categories</h4>
+        <p>
+            
+            <a class="badge badge-primary" href="/categories/amazon">amazon</a>
+            
+            <a class="badge badge-primary" href="/categories/analysis">analysis</a>
+            
+            <a class="badge badge-primary" href="/categories/cheatsheet">cheatsheet</a>
+            
+            <a class="badge badge-primary" href="/categories/clean-code">clean-code</a>
+            
+            <a class="badge badge-primary" href="/categories/competitions">competitions</a>
+            
+            <a class="badge badge-primary" href="/categories/computer-vision">computer-vision</a>
+            
+            <a class="badge badge-primary" href="/categories/conference">conference</a>
+            
+            <a class="badge badge-primary" href="/categories/conferences">conferences</a>
+            
+            <a class="badge badge-primary" href="/categories/cuda">cuda</a>
+            
+            <a class="badge badge-primary" href="/categories/deep-learning">deep-learning</a>
+            
+            <a class="badge badge-primary" href="/categories/etl">etl</a>
+            
+            <a class="badge badge-primary" href="/categories/hackathon">hackathon</a>
+            
+            <a class="badge badge-primary" href="/categories/hacks">hacks</a>
+            
+            <a class="badge badge-primary" href="/categories/infrastructure">infrastructure</a>
+            
+            <a class="badge badge-primary" href="/categories/installation">installation</a>
+            
+            <a class="badge badge-primary" href="/categories/kaggle">kaggle</a>
+            
+            <a class="badge badge-primary" href="/categories/metis">metis</a>
+            
+            <a class="badge badge-primary" href="/categories/nlp">nlp</a>
+            
+            <a class="badge badge-primary" href="/categories/notes">notes</a>
+            
+            <a class="badge badge-primary" href="/categories/optimization">optimization</a>
+            
+            <a class="badge badge-primary" href="/categories/python">python</a>
+            
+            <a class="badge badge-primary" href="/categories/site-setup">site-setup</a>
+            
+            <a class="badge badge-primary" href="/categories/spark">spark</a>
+            
+        </p>
+        
+    
+        
+    
+        
+        <h4>Tags</h4>
+        <p>
+            
+            <a class="badge badge-primary" href="/tags/amazon">amazon</a>
+            
+            <a class="badge badge-primary" href="/tags/analysis">analysis</a>
+            
+            <a class="badge badge-primary" href="/tags/backup">backup</a>
+            
+            <a class="badge badge-primary" href="/tags/bootcamp">bootcamp</a>
+            
+            <a class="badge badge-primary" href="/tags/clean-code">clean-code</a>
+            
+            <a class="badge badge-primary" href="/tags/competitions">competitions</a>
+            
+            <a class="badge badge-primary" href="/tags/computer-vision">computer-vision</a>
+            
+            <a class="badge badge-primary" href="/tags/conference">conference</a>
+            
+            <a class="badge badge-primary" href="/tags/conferences">conferences</a>
+            
+            <a class="badge badge-primary" href="/tags/copy">copy</a>
+            
+            <a class="badge badge-primary" href="/tags/cuda">cuda</a>
+            
+            <a class="badge badge-primary" href="/tags/data-science">data-science</a>
+            
+            <a class="badge badge-primary" href="/tags/datascience">datascience</a>
+            
+            <a class="badge badge-primary" href="/tags/deep-learning">deep-learning</a>
+            
+            <a class="badge badge-primary" href="/tags/deeplearning">deeplearning</a>
+            
+            <a class="badge badge-primary" href="/tags/developer">developer</a>
+            
+            <a class="badge badge-primary" href="/tags/dlib">dlib</a>
+            
+            <a class="badge badge-primary" href="/tags/ec2">ec2</a>
+            
+            <a class="badge badge-primary" href="/tags/fastai">fastai</a>
+            
+            <a class="badge badge-primary" href="/tags/gcp">gcp</a>
+            
+            <a class="badge badge-primary" href="/tags/gensim">gensim</a>
+            
+            <a class="badge badge-primary" href="/tags/google-cloud">google-cloud</a>
+            
+            <a class="badge badge-primary" href="/tags/google-cloud-next">google-cloud-next</a>
+            
+            <a class="badge badge-primary" href="/tags/hackathon">hackathon</a>
+            
+            <a class="badge badge-primary" href="/tags/hacks">hacks</a>
+            
+            <a class="badge badge-primary" href="/tags/health">health</a>
+            
+            <a class="badge badge-primary" href="/tags/incomplete">incomplete</a>
+            
+            <a class="badge badge-primary" href="/tags/innodb">innodb</a>
+            
+            <a class="badge badge-primary" href="/tags/installation">installation</a>
+            
+            <a class="badge badge-primary" href="/tags/ipython">ipython</a>
+            
+            <a class="badge badge-primary" href="/tags/java">java</a>
+            
+            <a class="badge badge-primary" href="/tags/jupyter">jupyter</a>
+            
+            <a class="badge badge-primary" href="/tags/kaggle">kaggle</a>
+            
+            <a class="badge badge-primary" href="/tags/kubectl">kubectl</a>
+            
+            <a class="badge badge-primary" href="/tags/maven">maven</a>
+            
+            <a class="badge badge-primary" href="/tags/metis">metis</a>
+            
+            <a class="badge badge-primary" href="/tags/model-interpretability">model-interpretability</a>
+            
+            <a class="badge badge-primary" href="/tags/mta">mta</a>
+            
+            <a class="badge badge-primary" href="/tags/mysql">mysql</a>
+            
+            <a class="badge badge-primary" href="/tags/nlp">nlp</a>
+            
+            <a class="badge badge-primary" href="/tags/notes">notes</a>
+            
+            <a class="badge badge-primary" href="/tags/nyc">nyc</a>
+            
+            <a class="badge badge-primary" href="/tags/opencv">opencv</a>
+            
+            <a class="badge badge-primary" href="/tags/proxy">proxy</a>
+            
+            <a class="badge badge-primary" href="/tags/python">python</a>
+            
+            <a class="badge badge-primary" href="/tags/pytorch">pytorch</a>
+            
+            <a class="badge badge-primary" href="/tags/r">r</a>
+            
+            <a class="badge badge-primary" href="/tags/r-studio">r-studio</a>
+            
+            <a class="badge badge-primary" href="/tags/s3">s3</a>
+            
+            <a class="badge badge-primary" href="/tags/scheduling">scheduling</a>
+            
+            <a class="badge badge-primary" href="/tags/spark">spark</a>
+            
+            <a class="badge badge-primary" href="/tags/ssh">ssh</a>
+            
+            <a class="badge badge-primary" href="/tags/streamlit">streamlit</a>
+            
+            <a class="badge badge-primary" href="/tags/texata">texata</a>
+            
+            <a class="badge badge-primary" href="/tags/topic-modeling">topic-modeling</a>
+            
+            <a class="badge badge-primary" href="/tags/typings">typings</a>
+            
+        </p>
+        
+    
+</section>
+    
+</aside>
+
+      </div>
+    </div>
+    
+
+    
+      
+
+
+
+
+
+
+<footer class="blog-footer w-100">
+    <nav class="navbar navbar-light bg-light">
+
+        <p class="w-100 text-center"><a href="#">Back to top</a></p>
+    </nav>
+</footer>
+
+    
+
+    
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>

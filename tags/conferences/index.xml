@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>conferences on My Blog</title>
+    <link>https://npatta01.github.io/tags/conferences/</link>
+    <description>Recent content in conferences on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 31 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/tags/conferences/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Conference Notes  - MLConf 2019</title>
+      <link>https://npatta01.github.io/post/2019/03/conference-notes-mlconf-2019/</link>
+      <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2019/03/conference-notes-mlconf-2019/</guid>
+      <description>&lt;p&gt;On March, I attended the machine learning conferene &lt;a href=&#34;https://mlconf.com/blog/mlconf-nyc-2019-speaker-resources/&#34;&gt;ML Conf&lt;/a&gt; in NYC.&lt;/p&gt;
+&lt;p&gt;Here are links shared from the conferences:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.slideshare.net/SessionsEvents&#34;&gt;Slides&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[Book Discount (40%)](&lt;a href=&#34;https://mlconf.com/blog/&#34;&gt;https://mlconf.com/blog/&lt;/a&gt;    tweet-for-a-chance-to-win-free-books-at-mlconf-nyc-this-friday/)  ctwmlconfny19&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mlconf.com/blog/mlconf-nyc-2019-speaker-resources/&#34;&gt;Speaker Resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCjeM1xxYb_37bZfyparLS3Q/videos&#34;&gt;Videos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here are a list of my favorite talks.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Upcoming NYC Conferences/Events</title>
+      <link>https://npatta01.github.io/post/2015/10/upcoming-nyc-conferences/events/</link>
+      <pubDate>Thu, 15 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/10/upcoming-nyc-conferences/events/</guid>
+      <description>&lt;p&gt;Here are some upcoming conferences/events in New York that I am planning to attend.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

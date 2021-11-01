@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>etl on My Blog</title>
+    <link>https://npatta01.github.io/categories/etl/</link>
+    <description>Recent content in etl on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Jan 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/categories/etl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Scheduling Jobs</title>
+      <link>https://npatta01.github.io/post/2021/01/scheduling-jobs/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2021/01/scheduling-jobs/</guid>
+      <description>&lt;p&gt;Here is an alternative to using cron.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

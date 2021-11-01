@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>maven on My Blog</title>
+    <link>https://npatta01.github.io/tags/maven/</link>
+    <description>Recent content in maven on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 Aug 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/tags/maven/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Installing maven 3.3.3 on Ubuntu</title>
+      <link>https://npatta01.github.io/post/2015/08/installing-maven-3.3.3-on-ubuntu/</link>
+      <pubDate>Wed, 05 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/08/installing-maven-3.3.3-on-ubuntu/</guid>
+      <description>&lt;p&gt;Maven is software project management tool usually used for for JVM based projects.
+One of its features is dealing with external project dependencies similar to pip from python.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>google cloud next on My Blog</title>
+    <link>https://npatta01.github.io/tags/google-cloud-next/</link>
+    <description>Recent content in google cloud next on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/tags/google-cloud-next/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Conference Notes - Google Cloud Next 2019</title>
+      <link>https://npatta01.github.io/post/2019/04/conference-notes-google-cloud-next-2019/</link>
+      <pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2019/04/conference-notes-google-cloud-next-2019/</guid>
+      <description>&lt;p&gt;Google Cloud had their annul conference in April this year in San Francisco.
+There were a lot of cool announcements.&lt;/p&gt;
+&lt;p&gt;Here is my list of announcements that I am excited for.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

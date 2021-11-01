@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>spark on My Blog</title>
+    <link>https://npatta01.github.io/tags/spark/</link>
+    <description>Recent content in spark on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 May 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/tags/spark/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Spark Summit 2021</title>
+      <link>https://npatta01.github.io/post/2021/05/spark-summit-2021/</link>
+      <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2021/05/spark-summit-2021/</guid>
+      <description>Project Zen: Making Data Science Easier in PySpark Project Zen Goals:
+ make spark more pythonic better ops with python libraries  Changes:
+ Python Hints better documentation support conda, pip, pipex to deploy package  Shipping pacakge in conda   pandas Api on Spark   visualization
+  Links: Project Zen Databricks Blog</description>
+    </item>
+    
+    <item>
+      <title>Spark Simple Analysis</title>
+      <link>https://npatta01.github.io/post/2015/10/spark-simple-analysis/</link>
+      <pubDate>Mon, 05 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/10/spark-simple-analysis/</guid>
+      <description>&lt;p&gt;During my Metis bootcamp,  I did an intro presentation to my class about spark.&lt;/p&gt;
+&lt;p&gt;The presentation explored the content and length of a sample of the commit messages on github.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Setting up pyspark with jupyter</title>
+      <link>https://npatta01.github.io/post/2015/08/setting-up-pyspark-with-jupyter/</link>
+      <pubDate>Sat, 01 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/08/setting-up-pyspark-with-jupyter/</guid>
+      <description>&lt;p&gt;Notes on setting up pyspark and jupyter notebook.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Setting up pyspark</title>
+      <link>https://npatta01.github.io/post/2015/07/setting-up-pyspark/</link>
+      <pubDate>Wed, 22 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/07/setting-up-pyspark/</guid>
+      <description>&lt;p&gt;Spark is a general-purpose cluster computing system.&lt;/p&gt;
+&lt;p&gt;Here are some of my notes in setting up:&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

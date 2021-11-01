@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ssh on My Blog</title>
+    <link>https://npatta01.github.io/tags/ssh/</link>
+    <description>Recent content in ssh on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 02 Sep 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://npatta01.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SSH Mount remote system</title>
+      <link>https://npatta01.github.io/post/2015/09/ssh-mount-remote-system/</link>
+      <pubDate>Wed, 02 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/09/ssh-mount-remote-system/</guid>
+      <description>&lt;p&gt;Wouldn&amp;rsquo;t it be nice, if we could have the remote folder mounted locally so, we can edit files with a gui.&lt;/p&gt;
+&lt;p&gt;One way to do such a thing is using ssfs.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SSH Config file</title>
+      <link>https://npatta01.github.io/post/2015/09/ssh-config-file/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/09/ssh-config-file/</guid>
+      <description>&lt;p&gt;SSH Config file is a way to manage your manage your ssh connections.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SSH Tunneling</title>
+      <link>https://npatta01.github.io/post/2015/07/ssh-tunneling/</link>
+      <pubDate>Wed, 22 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://npatta01.github.io/post/2015/07/ssh-tunneling/</guid>
+      <description>&lt;p&gt;Sometimes, you want to access a service running on a remote server, but there might be a firewall that does not forward the traffic to the port.&lt;/p&gt;
+&lt;p&gt;One way to deal with this is to create a socks proxy.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
