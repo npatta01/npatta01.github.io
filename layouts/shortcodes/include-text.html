@@ -1,0 +1,4 @@
+<details>
+  <summary>{{ .Get "summary" | default "Show file" }}</summary>
+  <pre><code>{{ readFile (.Get "file") | htmlEscape }}</code></pre>
+</details>
