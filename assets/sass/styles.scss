@@ -2,3 +2,20 @@
     max-width: 100%;
     height: auto;
 }
+
+.content pre {
+    margin: 1rem 0;
+    padding: 1rem;
+    overflow-x: auto;
+    color: var(--bs-body-color);
+    background-color: var(--bs-light);
+    border: 1px solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    line-height: 1.5;
+}
+
+.content pre code {
+    padding: 0;
+    color: inherit;
+    background: transparent;
+}

@@ -11,7 +11,7 @@ Here is an alternative to using cron.
 
 <!--more-->
 
-```
+```python
 import schedule
 import time
 import os
