@@ -11,7 +11,7 @@
       {{ end }}
       {{ with .Params.tags }}
         <span class="ms-3">Tags:
-          {{ range . }}<a href="{{ (printf "/tags/%s/" (. | urlize)) | relLangURL }}">{{ . }}</a>{{ end }}
+          {{ range . }}<a class="ms-2" href="{{ (printf "/tags/%s/" (. | urlize)) | relLangURL }}">{{ . }}</a>{{ end }}
         </span>
       {{ end }}
     </div>
