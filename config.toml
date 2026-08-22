@@ -83,7 +83,7 @@ defaultContentLanguage = "en"
     # num_recent_posts = 5
 
 [security]
-  allowContent = ["text/html"]
+  allowContent = ["text/html", "text/markdown"]
 
 #pygmentsUseClasses = true
 #
