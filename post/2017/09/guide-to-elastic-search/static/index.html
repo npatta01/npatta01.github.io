@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Guide to Elastic Search | Yet Another Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Elasticsearch is a search engine ideal for full text search. Lot of companies use it to fully or partially power their search and autocomplete features on their platform.  To get an idea of which comp">
+<meta name="keywords" content="python,tutorial,elastic search,database">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Guide to Elastic Search">
+<meta property="og:url" content="http://npatta01.github.io/2017/09/04/elastic/index.html">
+<meta property="og:site_name" content="Yet Another Blog">
+<meta property="og:description" content="Elasticsearch is a search engine ideal for full text search. Lot of companies use it to fully or partially power their search and autocomplete features on their platform.  To get an idea of which comp">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://npatta01.github.io/2017/09/04/elastic/sample_movies.png">
+<meta property="og:image" content="http://npatta01.github.io/2017/09/04/elastic/elasticsearch_head_anyquery.png">
+<meta property="og:image" content="http://npatta01.github.io/2017/09/04/elastic/elasticsearch_create_mapping.png">
+<meta property="og:image" content="http://npatta01.github.io/2017/09/04/elastic/elasticsearch_insert_one_doc.png">
+<meta property="og:image" content="http://npatta01.github.io/2017/09/04/elastic/elasticsearch_delete.png">
+<meta property="og:image" content="http://npatta01.github.io/2017/09/04/elastic/elasticsearch_bulkpayload.png">
+<meta property="og:image" content="http://npatta01.github.io/2017/09/04/elastic/search_query_es.png">
+<meta property="og:image" content="http://npatta01.github.io/2017/09/04/elastic/elasticsearch-raw_search_query.png">
+<meta property="og:image" content="http://npatta01.github.io/2017/09/04/elastic/elasticsearch-searchresults.png">
+<meta property="og:updated_time" content="2017-09-13T01:34:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Guide to Elastic Search">
+<meta name="twitter:description" content="Elasticsearch is a search engine ideal for full text search. Lot of companies use it to fully or partially power their search and autocomplete features on their platform.  To get an idea of which comp">
+<meta name="twitter:image" content="http://npatta01.github.io/2017/09/04/elastic/sample_movies.png">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-45866674-5', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Yet Another Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+          <a class="main-nav-link" href="/projects">Projects</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://npatta01.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2017/09/04/elastic" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/04/elastic/" class="article-date">
+  <time datetime="2017-09-04T04:00:00.000Z" itemprop="datePublished">2017-09-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/tutorial/">tutorial</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Guide to Elastic Search
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Elasticsearch is a search engine ideal for full text search.</p>
+<p>Lot of companies use it to fully or partially power their search and autocomplete features on their platform. </p>
+<p>To get an idea of which companies are using it and how they are using it, visit <a href="https://stackshare.io/elasticsearch/in-stacks" target="_blank" rel="external">stackshare</a>.</p>
+<p>This tutorial will guide you in :</p>
+<ul>
+<li>setting up elastic search</li>
+<li>terminology</li>
+<li>curl commands to index, update, search</li>
+</ul>
+<h1 id="I-Setup"><a href="#I-Setup" class="headerlink" title="I. Setup"></a>I. Setup</h1><p>If you plan to use a hosted offering, take a look at </p>
+<ul>
+<li><a href="https://aws.amazon.com/elasticsearch-service/pricing/" target="_blank" rel="external">Amazon’s Elastic Search</a> </li>
+<li><a href="https://console.cloud.google.com/launcher/browse?q=elastic" target="_blank" rel="external">Google Cloud Launcher</a></li>
+<li>Hosting from <a href="https://www.elastic.co/cloud/as-a-service/subscriptions" target="_blank" rel="external">ElaticCo</a>; maintainers of ElasticSearch</li>
+</ul>
+<p>For testing, using docker</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">docker pull docker.elastic.co/elasticsearch/elasticsearch:5.6.0</div><div class="line"></div><div class="line"><span class="comment"># folder that we are going to save elastic search data locally</span></div><div class="line">mkdir esdata</div><div class="line"></div><div class="line">docker run -p 9200:9200 -e <span class="string">"http.host=0.0.0.0"</span> -e <span class="string">"transport.host=127.0.0.1"</span> -v esdata/usr/share/elasticsearch/data docker.elastic.co/elasticsearch/elasticsearch:5.6.0</div></pre></td></tr></table></figure>
+<p>without docker<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">// Linux/Mac</div><div class="line">wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.6.0.tar.gz</div><div class="line"></div><div class="line">// Windows</div><div class="line">wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.6.0.zip</div><div class="line"></div><div class="line">unzip the archive and run</div><div class="line"></div><div class="line">bin/elasticsearch</div><div class="line"></div></pre></td></tr></table></figure></p>
+<p>To verify everything is working, navigate to <a href="http://localhost:9200/" target="_blank" rel="external">http://localhost:9200/</a>. You should see something like.</p>
+<figure class="highlight json"><figcaption><span>lang:.json</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"name"</span>: <span class="string">"kl9yfPi"</span>,</div><div class="line">    <span class="attr">"cluster_name"</span>: <span class="string">"elasticsearch"</span>,</div><div class="line">    <span class="attr">"cluster_uuid"</span>: <span class="string">"j3jdeZJuQciCEaPibQPtzg"</span>,</div><div class="line">    <span class="attr">"version"</span>: &#123;</div><div class="line">        <span class="attr">"number"</span>: <span class="string">"5.6.0"</span>,</div><div class="line">        <span class="attr">"build_hash"</span>: <span class="string">"781a835"</span>,</div><div class="line">        <span class="attr">"build_date"</span>: <span class="string">"2017-09-07T03:09:58.087Z"</span>,</div><div class="line">        <span class="attr">"build_snapshot"</span>: <span class="literal">false</span>,</div><div class="line">        <span class="attr">"lucene_version"</span>: <span class="string">"6.6.0"</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"tagline"</span>: <span class="string">"You Know, for Search"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="II-Terminology"><a href="#II-Terminology" class="headerlink" title="II. Terminology"></a>II. Terminology</h1><h2 id="Document"><a href="#Document" class="headerlink" title="Document"></a>Document</h2><p>Any item that needs to be stored in elastic search.<br>Examples of a Document can be Artist Info, Song Info and lyrics, User Profile,News articles, Tweets.</p>
+<p>Any item that  can be represented as a json , can be a document. A document is composed of multiple fields that may be indexed.</p>
+<p>Here is a sample document for </p>
+<figure class="highlight json"><figcaption><span>lang:.json</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">   <span class="attr">"movie_id"</span>:<span class="number">1</span>,</div><div class="line">   <span class="attr">"title"</span>:<span class="string">"Hidden Figures"</span>,</div><div class="line">   <span class="attr">"director"</span>:<span class="string">"Theodroe Melfi"</span>,</div><div class="line">   <span class="attr">"actors"</span>:[</div><div class="line">      <span class="string">"Taraji P. Henson"</span>,</div><div class="line">      <span class="string">"Octavia Spencer"</span>,</div><div class="line">      <span class="string">"Janelle Monáe"</span></div><div class="line">   ],</div><div class="line">   <span class="attr">"duration"</span>:<span class="number">127</span>,</div><div class="line">   <span class="attr">"lang"</span>:<span class="string">"en"</span>,</div><div class="line">   <span class="attr">"genres"</span>:[</div><div class="line">      <span class="string">"Biography"</span>,</div><div class="line">      <span class="string">"drama"</span>,</div><div class="line">      <span class="string">"history"</span></div><div class="line">   ],</div><div class="line">   <span class="attr">"description"</span>:<span class="string">""</span>,</div><div class="line">   <span class="attr">"release date"</span>:<span class="string">"2017/6/1"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Once a doc is indexed, you can query on any fields. You can ask questions like</p>
+<ul>
+<li>All biography movies released this Year</li>
+<li>All Movies with a certain actor</li>
+<li>All movies that have certain words in description</li>
+</ul>
+<h2 id="Type"><a href="#Type" class="headerlink" title="Type"></a>Type</h2><p>Defines the schema and mapping shared by documents. You can specify how you want to index different fields<br>A index can have multiple schemas.<br>If you are indexing a movie site, there would be a type for person (actor, director), movie, review.</p>
+<h2 id="Indices"><a href="#Indices" class="headerlink" title="Indices"></a>Indices</h2><p>Data structure used by Elastic Search to store info for fast retrieval. Elastic Search stores info in an “Inverted Index”.<br>Here is an example of an inverted index.</p>
+<p>Movie 1<br>Aladdin is a 1992 American animated musical fantasy film produced by Disney.</p>
+<p>Movie 2:<br>Mulan is a 1998 American animated musical action comedy-drama film produced by Disney </p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th style="text-align:center">(Doc id, pos)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aladdin</td>
+<td style="text-align:center">(1,1)</td>
+</tr>
+<tr>
+<td>Mulan</td>
+<td style="text-align:center">(2,1)</td>
+</tr>
+<tr>
+<td>American</td>
+<td style="text-align:center">(1,5), (2,5)</td>
+</tr>
+<tr>
+<td>Disney</td>
+<td style="text-align:center">(1,12), (2,13)</td>
+</tr>
+</tbody>
+</table>
+<p>When searching for matches in the index, Elastic Search uses TF-IDF.<br>If there is a lot of documents to index, Elastic Search can break the index into shards that are stored in different machines.</p>
+<h2 id="TF-IDF"><a href="#TF-IDF" class="headerlink" title="TF-IDF"></a>TF-IDF</h2><p>A Scoring algorithm for two documents.<br>Product of “Term Frequency” and “Inverse Document Frequency”<br>Term Frequency/ Document Frequency can be used to measure relevance.</p>
+<p><strong>Term Frequency</strong> is how often a term appears in a docuemnt .<br><strong>Document Frequency</strong> is how often a term appears in all documents.</p>
+<p>The intuition for this formula is that </p>
+<ul>
+<li>words that appear in a lot of documents, might not be very useful. </li>
+<li>words that appear a lot of time in one document and rarely in other docs, is more relevant to the query</li>
+</ul>
+<h2 id="Shard"><a href="#Shard" class="headerlink" title="Shard"></a>Shard</h2><p>In order to scale, Elastic Search can split the index into smaller shards.<br>A shard has its own copy of the index.<br>Every document is sharded into a specific shard.</p>
+<h1 id="III-Commands"><a href="#III-Commands" class="headerlink" title="III. Commands"></a>III. Commands</h1><p>For the rest of the tutorial, we are going to use a movie dataset from <a href="https://grouplens.org/datasets/movielens/" target="_blank" rel="external">MovieLens</a>.<br>The data is spread across multiple csv files. </p>
+<p>For simplicity sake, I have processed the three files using this <a href="helper.py">script</a> and stored it in this <a href="movies.csv.zip">file</a>.</p>
+<p>Lets look at some sample data in this file<br><img src="/2017/09/04/elastic/sample_movies.png" alt="[Sample Movies]" title="[Sample Movies]"></p>
+<p>The core info we are storing is movieId, title, genres, tags, imdbId, tmdbId, numRatings.<br>Tags and genres are lists.</p>
+<p>To interact with your elastic search cluster, we are going to use the http requests.<br>If you want a ui to make the requests, you can use <a href="https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en" target="_blank" rel="external">Postman</a> or you can use the elasticsearch plugin elastichead <a href="https://chrome.google.com/webstore/detail/elasticsearch-head/ffmkiejjmecolpfloofpjologoblkegm/" target="_blank" rel="external">chrome plugin</a> </p>
+<p>If you decide to use the elasticsearch head plugin, navigate to the “Any Request” tab.<br>Here is the ElasticSearch Head ui.<br><img src="/2017/09/04/elastic/elasticsearch_head_anyquery.png" alt="[Elastic Search Head]" title="[Elastic Search Head]"></p>
+<h2 id="Create-a-schema-type"><a href="#Create-a-schema-type" class="headerlink" title="Create a schema/ type"></a>Create a schema/ type</h2><p>Before we can store the data, we need to create a schema.<br>Send a put request to the below url with payload<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">localhost:</span><span class="number">9200</span>/movies</div></pre></td></tr></table></figure></p>
+<figure class="highlight json"><figcaption><span>lang:.json</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"mappings"</span>: &#123;</div><div class="line">    <span class="attr">"movie"</span>: &#123;</div><div class="line">      <span class="attr">"_all"</span>: &#123;</div><div class="line">        <span class="attr">"enabled"</span>: <span class="literal">false</span></div><div class="line">      &#125;,</div><div class="line">      <span class="attr">"properties"</span>: &#123;</div><div class="line">        <span class="attr">"movieId"</span>: &#123;</div><div class="line">          <span class="attr">"type"</span>: <span class="string">"text"</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">"title"</span>: &#123;</div><div class="line">          <span class="attr">"type"</span>: <span class="string">"text"</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">"genres"</span>: &#123;</div><div class="line">          <span class="attr">"type"</span>: <span class="string">"text"</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">"tags"</span>: &#123;</div><div class="line">          <span class="attr">"type"</span>: <span class="string">"text"</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">"imdbId"</span>: &#123;</div><div class="line">          <span class="attr">"type"</span>: <span class="string">"text"</span>,</div><div class="line">          <span class="attr">"index"</span>: <span class="string">"no"</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">"tmdbId"</span>: &#123;</div><div class="line">          <span class="attr">"type"</span>: <span class="string">"text"</span>,</div><div class="line">          <span class="attr">"index"</span>: <span class="string">"no"</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">"numRatings"</span>: &#123;</div><div class="line">          <span class="attr">"type"</span>: <span class="string">"integer"</span>,</div><div class="line">          <span class="attr">"index"</span>: <span class="string">"no"</span></div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Here is the ESHead ui containing mapping.<br><img src="/2017/09/04/elastic/elasticsearch_create_mapping.png" alt="[Create Mapping]" title="[Create Mapping]"></p>
+<p>We are defining a mapping called “movie”.<br>By default, Elastic Search stores all data in the <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-all-field.html" target="_blank" rel="external">_all field</a>.<br>To disable that, we set enabled to false.</p>
+<p>The properties field contains all the fields we want to index.<br>For every property, we can specify the type such as text.<br>We could also specify, if we want to store a field but not index it using index=no</p>
+<h2 id="Insert-one-document"><a href="#Insert-one-document" class="headerlink" title="Insert one document"></a>Insert one document</h2><p>To add a document, we need to send a put request to<br><figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="xml">localhost:9200/</span><span class="template-variable">&#123;index&#125;</span><span class="xml">/</span><span class="template-variable">&#123;schema&#125;</span><span class="xml">/</span><span class="template-variable">&#123;doc_id&#125;</span><span class="xml"></span></div></pre></td></tr></table></figure></p>
+<p>In our case, it would be<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">localhost:</span><span class="number">9200</span><span class="meta-keyword">/movies/</span>movie/<span class="number">1</span></div></pre></td></tr></table></figure></p>
+<p>The payload would be<br><figure class="highlight json"><figcaption><span>lang:.json</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"movieId"</span>: <span class="string">"1"</span>,</div><div class="line">  <span class="attr">"title"</span>: <span class="string">"Toy Story (1995)"</span>,</div><div class="line">  <span class="attr">"genres"</span>: [</div><div class="line">    <span class="string">"Adventure"</span>,</div><div class="line">    <span class="string">"Animation"</span>,</div><div class="line">    <span class="string">"Children"</span>,</div><div class="line">    <span class="string">"Comedy"</span>,</div><div class="line">    <span class="string">"Fantasy"</span></div><div class="line">  ],</div><div class="line">  <span class="attr">"year"</span>: <span class="number">1995</span>,</div><div class="line">  <span class="attr">"imdbId"</span>: <span class="string">"0114709"</span>,</div><div class="line">  <span class="attr">"tmdbId"</span>: <span class="string">"862"</span>,</div><div class="line">  <span class="attr">"numRatings"</span>: <span class="number">247</span>,</div><div class="line">  <span class="attr">"tags"</span>: [</div><div class="line">    <span class="string">"Pixar"</span></div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Here is the ESHead UI with the payload.</p>
+<img src="/2017/09/04/elastic/elasticsearch_insert_one_doc.png" alt="[Insert One Doc]" title="[Insert One Doc]">
+<h2 id="Delete-Doc"><a href="#Delete-Doc" class="headerlink" title="Delete Doc"></a>Delete Doc</h2><p>To delete doc, we need to send a delete request to<br><figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="xml">localhost:9200/</span><span class="template-variable">&#123;index&#125;</span><span class="xml">/</span><span class="template-variable">&#123;schema&#125;</span><span class="xml">/</span><span class="template-variable">&#123;doc_id&#125;</span><span class="xml"></span></div></pre></td></tr></table></figure></p>
+<p>So, if we want to delete the document we inserted, send a request to<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">localhost:</span><span class="number">9200</span><span class="meta-keyword">/movies/</span>movie/<span class="number">1</span></div></pre></td></tr></table></figure></p>
+<p>Here is the ESHead UI with the payload.<br><img src="/2017/09/04/elastic/elasticsearch_delete.png" alt="[Delete Doc]" title="[Delete Doc]"></p>
+<h2 id="Insert-multiple-documents"><a href="#Insert-multiple-documents" class="headerlink" title="Insert multiple documents"></a>Insert multiple documents</h2><p>If you want to insert multiple documents at once, you need to create a payload like</p>
+<img src="/2017/09/04/elastic/elasticsearch_bulkpayload.png" alt="[Bulk Payload]" title="[Bulk Payload]">
+<p>Here is the command I used to convert the movies.json file to the appropriate file.<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cat movies.json <span class="string">| jq -c ' &#123;"</span>index<span class="string">": &#123;"</span>_index<span class="string">": "</span>movies<span class="string">", "</span>_type<span class="string">": "</span>movie<span class="string">", "</span>_id<span class="string">"</span></div><div class="line">: .movieId&#125;&#125;, .' &gt; movies_bulk.json</div></pre></td></tr></table></figure></p>
+<p>You need to use <a href="https://stedolan.github.io/jq/" target="_blank" rel="external">JQ</a> tool.</p>
+<p>For simplicity sake, <a href="movies_bulk.json.zip">here</a> is the output file after the command.</p>
+<p>Once you use download the file, run the below command to bulk insert the docs.<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">curl</span> -XPOST localhost:<span class="number">9200</span>/_bulk --<span class="meta">data</span>-<span class="keyword">binary </span> <span class="comment">@./movies_bulk.json</span></div></pre></td></tr></table></figure></p>
+<h2 id="Search"><a href="#Search" class="headerlink" title="Search"></a>Search</h2><p>Creating an elastic search query can be a bit difficult.<br>To create the query, lets use the “Structured Query” in elasticsearch.</p>
+<p>Here is an example query, to find all movies that</p>
+<ul>
+<li>have “harry” in title</li>
+<li>released after 2000</li>
+<li>genre is Fantasy</li>
+</ul>
+<img src="/2017/09/04/elastic/search_query_es.png" alt="[Search Query]" title="[Search Query]">
+<p>If you want to send the query using curl, click the checkbox “Show query source”.</p>
+<img src="/2017/09/04/elastic/elasticsearch-raw_search_query.png" alt="[Raw Query]" title="[Raw Query]">
+<p>If you want to see the raw payload, change the value of “Output Results” to json.</p>
+<img src="/2017/09/04/elastic/elasticsearch-searchresults.png" alt="[Search Results]" title="[Search Results]">
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://npatta01.github.io/2017/09/04/elastic/" data-id="cj7icp3ac0023qduyyy7keqhz" class="article-share-link">Share</a>
+      
+        <a href="http://npatta01.github.io/2017/09/04/elastic/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/database/">database</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/elastic-search/">elastic search</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tutorial/">tutorial</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/01/useful_gcloud_commands/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Useful Google Cloud Commands</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/amazon/">amazon</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/analysis/">analysis</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/commands/">commands</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/competitions/">competitions</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conference/">conference</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/conferences/">conferences</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cuda/">cuda</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hackathon/">hackathon</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hacks/">hacks</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/installation/">installation</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/kaggle/">kaggle</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/metis/">metis</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/nlp/">nlp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/opencv/">opencv</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/optimization/">optimization</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/site-setup/">site_setup</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/spark/">spark</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tutorial/">tutorial</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/vision/">vision</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/NYC/">NYC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Texata/">Texata</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/amazon/">amazon</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/analysis/">analysis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/backup/">backup</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bootcamp/">bootcamp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/commands/">commands</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/competitions/">competitions</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/computer-vision/">computer vision</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/conference/">conference</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/conferences/">conferences</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/copy/">copy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cuda/">cuda</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/data-science/">data science</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/database/">database</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/datascience/">datascience</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deeplearning/">deeplearning</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dlib/">dlib</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ec2/">ec2</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/elastic-search/">elastic search</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gcloud/">gcloud</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gensim/">gensim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/google-cloud/">google cloud</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hackathon/">hackathon</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hacks/">hacks</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/health/">health</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/innodb/">innodb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/installation/">installation</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ipython/">ipython</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jupyter/">jupyter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kaggle/">kaggle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/">maven</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/metis/">metis</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mta/">mta</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/new-york/">new york</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nlp/">nlp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opencv/">opencv</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proxy/">proxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/r/">r</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/r-studio/">r-studio</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/s3/">s3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/setup/">setup</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spark/">spark</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">ssh</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/topic-modeling/">topic-modeling</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tutorial/">tutorial</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/NYC/" style="font-size: 10px;">NYC</a> <a href="/tags/Texata/" style="font-size: 10px;">Texata</a> <a href="/tags/amazon/" style="font-size: 13.33px;">amazon</a> <a href="/tags/analysis/" style="font-size: 10px;">analysis</a> <a href="/tags/backup/" style="font-size: 10px;">backup</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/bootcamp/" style="font-size: 10px;">bootcamp</a> <a href="/tags/commands/" style="font-size: 10px;">commands</a> <a href="/tags/competitions/" style="font-size: 10px;">competitions</a> <a href="/tags/computer-vision/" style="font-size: 10px;">computer vision</a> <a href="/tags/conference/" style="font-size: 10px;">conference</a> <a href="/tags/conferences/" style="font-size: 10px;">conferences</a> <a href="/tags/copy/" style="font-size: 10px;">copy</a> <a href="/tags/cuda/" style="font-size: 13.33px;">cuda</a> <a href="/tags/data-science/" style="font-size: 10px;">data science</a> <a href="/tags/database/" style="font-size: 10px;">database</a> <a href="/tags/datascience/" style="font-size: 13.33px;">datascience</a> <a href="/tags/deeplearning/" style="font-size: 13.33px;">deeplearning</a> <a href="/tags/dlib/" style="font-size: 10px;">dlib</a> <a href="/tags/ec2/" style="font-size: 13.33px;">ec2</a> <a href="/tags/elastic-search/" style="font-size: 10px;">elastic search</a> <a href="/tags/gcloud/" style="font-size: 10px;">gcloud</a> <a href="/tags/gensim/" style="font-size: 10px;">gensim</a> <a href="/tags/google-cloud/" style="font-size: 10px;">google cloud</a> <a href="/tags/hackathon/" style="font-size: 10px;">hackathon</a> <a href="/tags/hacks/" style="font-size: 13.33px;">hacks</a> <a href="/tags/health/" style="font-size: 10px;">health</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/innodb/" style="font-size: 10px;">innodb</a> <a href="/tags/installation/" style="font-size: 13.33px;">installation</a> <a href="/tags/ipython/" style="font-size: 10px;">ipython</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jupyter/" style="font-size: 10px;">jupyter</a> <a href="/tags/kaggle/" style="font-size: 10px;">kaggle</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a> <a href="/tags/metis/" style="font-size: 13.33px;">metis</a> <a href="/tags/mta/" style="font-size: 10px;">mta</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/new-york/" style="font-size: 10px;">new york</a> <a href="/tags/nlp/" style="font-size: 10px;">nlp</a> <a href="/tags/opencv/" style="font-size: 10px;">opencv</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/r/" style="font-size: 10px;">r</a> <a href="/tags/r-studio/" style="font-size: 10px;">r-studio</a> <a href="/tags/s3/" style="font-size: 10px;">s3</a> <a href="/tags/setup/" style="font-size: 10px;">setup</a> <a href="/tags/spark/" style="font-size: 16.67px;">spark</a> <a href="/tags/ssh/" style="font-size: 16.67px;">ssh</a> <a href="/tags/topic-modeling/" style="font-size: 10px;">topic-modeling</a> <a href="/tags/tutorial/" style="font-size: 10px;">tutorial</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/09/04/elastic/">Guide to Elastic Search</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/01/useful_gcloud_commands/">Useful Google Cloud Commands</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/11/pydata_ny_2015/">Pydata Ny 2015 Conference</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/09/get_better_with_data_2015/">Get Better With Data 2015</a>
+          </li>
+        
+          <li>
+            <a href="/2015/10/23/superuser_topic_modeling/">Topic Modeling on the Super User Forum</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Nidhin Pattaniyil<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+    <a href="/projects" class="mobile-nav-link">Projects</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'npatta01-blog';
+  
+  var disqus_url = 'http://npatta01.github.io/2017/09/04/elastic/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
