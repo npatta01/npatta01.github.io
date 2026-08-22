@@ -231,6 +231,11 @@ Create `layouts/_default/single.html` with this structure:
           {{ range . }}<a href="{{ (printf "/categories/%s/" (. | urlize)) | relLangURL }}">{{ . }}</a>{{ end }}
         </span>
       {{ end }}
+      {{ with .Params.tags }}
+        <span class="ms-3">Tags:
+          {{ range . }}<a href="{{ (printf "/tags/%s/" (. | urlize)) | relLangURL }}">{{ . }}</a>{{ end }}
+        </span>
+      {{ end }}
     </div>
   </header>
   <div class="content">{{ .Content }}</div>
