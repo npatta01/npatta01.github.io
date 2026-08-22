@@ -29,7 +29,7 @@ Alternative approaches considered:
 
 - Set the site locale using current Hugo keys: `locale = "en-US"` and `languages.en.label = "English"`.
 - Keep `baseurl`, the current menu destinations, taxonomies, pagination, and `/post/:year/:month/:title/` permalink structure.
-- Add `[security] allowContent = ["text/html"]` to preserve the existing published HTML artifact under `content/post/2017/elastic/static/`.
+- Add `[security] allowContent = ["text/html", "text/markdown"]` to preserve the existing published HTML artifact under `content/post/2017/elastic/static/` while allowing the site’s Markdown sources to render.
 - Remove the obsolete Universal Analytics `UA-47268287-3` configuration rather than emitting a nonfunctional tracker. Do not add a GA4 tracker without a user-supplied `G-...` measurement ID.
 - Add the replacement theme’s minimal Bootstrap, SEO, and menu parameters without copying unrelated demo-site settings.
 
@@ -67,4 +67,3 @@ The migration is ready for review only when all of the following pass on Hugo `0
 ## Rollback
 
 The migration will be isolated on its own branch. Reverting the migration commit restores the old submodule URL, config, overrides, and workflow. The article commit already merged into `source` is independent and must not be reverted as part of this migration.
-

@@ -172,7 +172,7 @@ Add:
 
 ~~~toml
 [security]
-  allowContent = ["text/html"]
+  allowContent = ["text/html", "text/markdown"]
 
 [params.options]
   bootStrapJs = true
