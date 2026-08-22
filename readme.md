@@ -10,7 +10,7 @@ The blog is build using [Hugo](https://gohugo.io/).
 
 ## Development
 
-To develop and see changes locally
+Install Hugo extended 0.165.0, then run:
 ```
 hugo server -D
 ```
@@ -19,4 +19,4 @@ http://localhost:1313/
 
 ## Deployment
 
-The blog is automatically developed using [travis ci](.travis.yml) on every commit.
+GitHub Actions builds the blog on pushes to `source` and publishes `public/` to `master`.
