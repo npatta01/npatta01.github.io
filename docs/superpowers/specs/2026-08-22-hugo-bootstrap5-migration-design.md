@@ -39,6 +39,8 @@ Alternative approaches considered:
 - Change the Git submodule URL to `https://github.com/filipecarneiro/hugo-bootstrap-theme.git` and pin it to the reviewed release commit.
 - Retain existing local overrides only where the new theme exposes the equivalent hook: brand/header, footer, head customizations, post date, and shortcodes.
 - Adapt override markup to Bootstrap 5 classes and the new theme’s partial names; do not copy the entire theme into the site.
+- Add a site-local list override that calls Hugo pagination while retaining the replacement theme’s card/filter presentation.
+- Move the legacy pre-rendered Elastic HTML artifact to `static/post/2017/09/guide-to-elastic-search/static/index.html` so Hugo copies the exact route served by the old build.
 - Preserve existing page assets, content bundles, shortcode names, and static files.
 
 ### Build and deployment
@@ -61,9 +63,10 @@ The migration is ready for review only when all of the following pass on Hugo `0
 1. `hugo --gc --minify` completes successfully.
 2. The generated article route for the GNOME RDP post exists and contains the documented `use redirection server name:i:1` fix.
 3. Existing high-value routes exist: `/`, `/about/`, `/projects/`, `/presentations/`, `/notes/`, at least one older post, tag/category pages, RSS, sitemap, and the static HTML artifact.
-4. No generated internal links point to missing pages, and the canonical URL prefix remains `https://npatta01.github.io/`.
-5. The working tree diff contains no generated `public/`, resources, caches, credentials, or unrelated content changes.
-6. The GitHub Actions workflow parses and uses Hugo extended `0.165.0` while retaining source-only deployment.
+4. Pagination routes from the baseline remain present, including root, post, tag, and category page routes.
+5. No generated internal links point to missing pages, and the canonical URL prefix remains `https://npatta01.github.io/`.
+6. The working tree diff contains no generated `public/`, resources, caches, credentials, or unrelated content changes.
+7. The GitHub Actions workflow parses and uses Hugo extended `0.165.0` while retaining source-only deployment.
 
 ## Rollback
 

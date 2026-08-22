@@ -392,15 +392,63 @@ git diff --stat
 
 Expected: only intended source/config/theme/workflow/readme/spec/plan files are changed; `public/`, resources, caches, credentials, and temporary route lists are absent.
 
-### Task 7: Commit the implementation for review
+### Task 7: Restore pagination and the legacy static artifact route
 
 **Files:**
-- Add/modify/delete: all files from Tasks 2–5
+- Create: `layouts/_default/list.html`
+- Move: `content/post/2017/elastic/static/index.html` to `static/post/2017/09/guide-to-elastic-search/static/index.html`
+
+**Interfaces:**
+- Consumes: the replacement theme’s card/filter list and the baseline route contract.
+- Produces: paginated home, post, tag, and category lists plus the legacy static HTML route.
+
+- [ ] **Step 1: Add a site-local paginated list override.**
+
+Copy only the replacement theme’s list markup into `layouts/_default/list.html`, preserving its filter and card presentation. Replace its unpaginated page range with:
+
+~~~go-html-template
+{{ $paginator := .Paginate .Pages }}
+{{ range $paginator.Pages }}
+  ...
+{{ end }}
+~~~
+
+Add Bootstrap pagination links using `$paginator.Prev`, `$paginator.Pagers`, and `$paginator.Next`, with each link using its pager `.URL`. The override must apply to home, post, tag, and category list pages so `paginate = 3` and `paginatePath = "page"` recreate the baseline routes.
+
+- [ ] **Step 2: Restore the legacy static artifact at its published URL.**
+
+Run:
+
+~~~bash
+mkdir -p static/post/2017/09/guide-to-elastic-search/static
+git mv content/post/2017/elastic/static/index.html static/post/2017/09/guide-to-elastic-search/static/index.html
+~~~
+
+Do not alter the file contents or move the other Elastic static resources. The generated route must be `/post/2017/09/guide-to-elastic-search/static/index.html`.
+
+- [ ] **Step 3: Build and inspect the compatibility outputs.**
+
+Run:
+
+~~~bash
+hugo --gc --minify --logLevel info
+test -s public/post/page/2/index.html
+test -s public/tags/page/2/index.html
+test -s public/categories/page/2/index.html
+test -s public/post/2017/09/guide-to-elastic-search/static/index.html
+~~~
+
+Expected: the representative pagination routes and the legacy artifact exist before the full Task 6 verification is rerun.
+
+### Task 8: Commit the implementation for review
+
+**Files:**
+- Add/modify/delete: all files from Tasks 2–7
 - Preserve: `docs/superpowers/specs/2026-08-22-hugo-bootstrap5-migration-design.md`
 - Preserve: `docs/superpowers/plans/2026-08-22-hugo-bootstrap5-migration.md`
 
 **Interfaces:**
-- Consumes: fresh passing verification from Task 6.
+- Consumes: fresh passing verification from Task 6 after Task 7 compatibility fixes.
 - Produces: a reviewable local migration commit on `blog/hugo-bootstrap5-migration`.
 
 - [ ] **Step 1: Review the complete diff.**
@@ -414,14 +462,14 @@ git diff -- .gitmodules config.toml .github/workflows/build.yaml readme.md layou
 git diff --submodule=log -- themes/hugo-bootstrap
 ~~~
 
-Confirm that the article content is unchanged from the merged `source` branch and the only content change is the already-live GNOME RDP post.
+Confirm that the article content is unchanged from the merged `source` branch, apart from the already-live GNOME RDP post and the route-preserving move of the legacy static artifact.
 
 - [ ] **Step 2: Commit the migration.**
 
 Run:
 
 ~~~bash
-git add .gitmodules config.toml .github/workflows/build.yaml readme.md layouts docs/superpowers/specs/2026-08-22-hugo-bootstrap5-migration-design.md docs/superpowers/plans/2026-08-22-hugo-bootstrap5-migration.md themes/hugo-bootstrap
+git add .gitmodules config.toml .github/workflows/build.yaml readme.md layouts content/post/2017/elastic/static/index.html static/post/2017/09/guide-to-elastic-search/static/index.html docs/superpowers/specs/2026-08-22-hugo-bootstrap5-migration-design.md docs/superpowers/plans/2026-08-22-hugo-bootstrap5-migration.md themes/hugo-bootstrap
 git commit -m "Upgrade blog to Hugo 0.165 and Bootstrap 5 theme"
 ~~~
 
