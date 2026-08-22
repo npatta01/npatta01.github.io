@@ -2,10 +2,6 @@ baseURL = "https://npatta01.github.io/"
 title = "My Blog"
 locale = "en-US"
 
-# Pagination
-paginate = 3
-paginatePath = "page"
-
 # Theme to use
 theme = "hugo-bootstrap"
 
@@ -103,3 +99,7 @@ defaultContentLanguage = "en"
 #[pygmentsOptions]
 #    linenos = true
 #    linenostart = 5
+
+[pagination]
+  pagerSize = 3
+  path = "page"

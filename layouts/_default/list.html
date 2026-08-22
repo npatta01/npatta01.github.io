@@ -26,7 +26,11 @@
         </div>
     {{ end }}
 
-    {{ $paginator := .Paginate .Pages }}
+    {{ $pages := .Pages }}
+    {{ if eq .Kind "home" }}
+        {{ $pages = where .Site.RegularPages "Section" "post" }}
+    {{ end }}
+    {{ $paginator := .Paginate $pages }}
     {{ if ne .Kind "taxonomy" }}
 
         {{ range $paginator.Pages }}
