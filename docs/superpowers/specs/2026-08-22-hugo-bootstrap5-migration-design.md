@@ -39,7 +39,7 @@ Alternative approaches considered:
 - Change the Git submodule URL to `https://github.com/filipecarneiro/hugo-bootstrap-theme.git` and pin it to the reviewed release commit.
 - Retain existing local overrides only where the new theme exposes the equivalent hook: brand/header, footer, head customizations, post date, and shortcodes.
 - Adapt override markup to Bootstrap 5 classes and the new theme’s partial names; do not copy the entire theme into the site.
-- Add a site-local list override that calls Hugo pagination while retaining the replacement theme’s card/filter presentation.
+- Add a site-local list override that calls Hugo pagination while retaining the replacement theme’s card/filter presentation. On the home page, paginate all published regular pages to preserve the legacy root pagination contract; keep `params.mainSections = ["post"]` for the sidebar’s recent-post selection.
 - Move the legacy pre-rendered Elastic HTML artifact to `static/post/2017/09/guide-to-elastic-search/static/index.html` so Hugo copies the exact route served by the old build.
 - Preserve existing page assets, content bundles, shortcode names, and static files.
 

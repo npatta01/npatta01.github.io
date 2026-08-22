@@ -407,12 +407,12 @@ Expected: only intended source/config/theme/workflow/readme/spec/plan files are 
 
 - [ ] **Step 1: Add a site-local paginated list override.**
 
-Use Hugo’s current `[pagination] pagerSize = 3` and `path = "page"` configuration, then copy only the replacement theme’s list markup into `layouts/_default/list.html`, preserving its filter and card presentation. For the home page, paginate the site’s regular pages from `params.mainSections` (currently `post`) rather than the home page’s top-level `.Pages`; for section and taxonomy lists, keep their existing `.Pages` collection. Replace the unpaginated page range with:
+Use Hugo’s current `[pagination] pagerSize = 3` and `path = "page"` configuration, then copy only the replacement theme’s list markup into `layouts/_default/list.html`, preserving its filter and card presentation. For the home page, paginate all published `.Site.RegularPages` to preserve the baseline’s root-page pagination, while leaving `params.mainSections = ["post"]` for recent-post/sidebar behavior; for section and taxonomy lists, keep their existing `.Pages` collection. Replace the unpaginated page range with:
 
 ~~~go-html-template
 {{ $pages := .Pages }}
 {{ if eq .Kind "home" }}
-  {{ $pages = where .Site.RegularPages "Section" "post" }}
+  {{ $pages = .Site.RegularPages }}
 {{ end }}
 {{ $paginator := .Paginate $pages }}
 {{ range $paginator.Pages }}
