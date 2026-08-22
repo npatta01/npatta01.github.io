@@ -109,16 +109,17 @@ git diff --cached --check
 
 Expected: the staged gitlink resolves to the reviewed theme commit and no source files inside the submodule are staged.
 
-- [ ] **Step 3: Verify a clean clone can initialize the new theme.**
+- [ ] **Step 3: Verify the staged submodule metadata before moving on.**
 
-Run from a disposable clone after the change is staged:
+Run:
 
 ~~~bash
-git clone --recurse-submodules "$PWD" "$CLONE_DIR/site"
-git -C "$CLONE_DIR/site" submodule status
+git config -f .gitmodules --get submodule.themes/hugo-bootstrap.url
+git diff --cached --submodule=log -- .gitmodules themes/hugo-bootstrap
+git -C themes/hugo-bootstrap rev-parse HEAD
 ~~~
 
-Expected: `themes/hugo-bootstrap` initializes from `filipecarneiro/hugo-bootstrap-theme.git` at the same full commit.
+Expected: the staged URL is `https://github.com/filipecarneiro/hugo-bootstrap-theme.git`, the staged gitlink points to `cc21e8101c23dfa1803f3d15a68ebb8de60fed0e`, and the local submodule is checked out at that full commit. A clean-clone check is deferred to Task 6 after the final migration commit, when the new metadata is in `HEAD`.
 
 ### Task 3: Modernize site configuration
 
@@ -431,4 +432,3 @@ git show --stat --oneline HEAD
 ~~~
 
 Expected: the migration branch is clean and the commit contains no generated output or unrelated content changes.
-
