@@ -1,6 +1,6 @@
-baseurl = "https://npatta01.github.io/"
+baseURL = "https://npatta01.github.io/"
 title = "My Blog"
-languageCode = "en-us"
+locale = "en-US"
 
 # Pagination
 paginate = 3
@@ -13,15 +13,16 @@ theme = "hugo-bootstrap"
   tag = "tags"
   category = "categories"
 
-# Google analytics
-googleAnalytics = "UA-47268287-3"
-
 # Languages
 
 defaultContentLanguage = "en"
 
 [languages.en]
-  languageName = "English"
+  label = "English"
+  locale = "en-US"
+  weight = 10
+  [languages.en.params]
+    languageISO = "EN"
 
   # Replace the default footer message with a localized message
   # copyright = "Hugo template made with ❤ by Xzya"
@@ -59,6 +60,12 @@ defaultContentLanguage = "en"
   # Default author
   author = "Nidhin Pattaniyil"
 
+  [params.options]
+    bootStrapJs = true
+    breadCrumb = true
+    listCategoryFilter = true
+    listTagFilter = true
+
   # Date format (default: Jan 2, 2006)
   # date_format = "Jan 2, 2006"
 
@@ -74,6 +81,9 @@ defaultContentLanguage = "en"
 
     # How many posts to show on the sidebar (Default: 5)
     # num_recent_posts = 5
+
+[security]
+  allowContent = ["text/html"]
 
 #pygmentsUseClasses = true
 #
