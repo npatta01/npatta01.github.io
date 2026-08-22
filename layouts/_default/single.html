@@ -1,0 +1,16 @@
+{{ define "main" }}
+<article class="container py-3">
+  <header class="mb-4">
+    <h1>{{ .Title }}</h1>
+    <div class="text-muted">
+      {{ with .Date }}<time datetime="{{ .Format "2006-01-02" }}">{{ .Format "Jan 2, 2006" }}</time>{{ end }}
+      {{ with .Params.categories }}
+        <span class="ms-3">Category:
+          {{ range . }}<a href="{{ (printf "/categories/%s/" (. | urlize)) | relLangURL }}">{{ . }}</a>{{ end }}
+        </span>
+      {{ end }}
+    </div>
+  </header>
+  <div class="content">{{ .Content }}</div>
+</article>
+{{ end }}
