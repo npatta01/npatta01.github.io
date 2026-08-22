@@ -139,9 +139,11 @@ baseURL = "https://npatta01.github.io/"
 title = "My Blog"
 locale = "en-US"
 
-paginate = 3
-paginatePath = "page"
 theme = "hugo-bootstrap"
+
+[pagination]
+  pagerSize = 3
+  path = "page"
 
 defaultContentLanguage = "en"
 
@@ -395,6 +397,7 @@ Expected: only intended source/config/theme/workflow/readme/spec/plan files are 
 ### Task 7: Restore pagination and the legacy static artifact route
 
 **Files:**
+- Modify: `config.toml` pagination keys
 - Create: `layouts/_default/list.html`
 - Move: `content/post/2017/elastic/static/index.html` to `static/post/2017/09/guide-to-elastic-search/static/index.html`
 
@@ -404,16 +407,20 @@ Expected: only intended source/config/theme/workflow/readme/spec/plan files are 
 
 - [ ] **Step 1: Add a site-local paginated list override.**
 
-Copy only the replacement theme’s list markup into `layouts/_default/list.html`, preserving its filter and card presentation. Replace its unpaginated page range with:
+Use Hugo’s current `[pagination] pagerSize = 3` and `path = "page"` configuration, then copy only the replacement theme’s list markup into `layouts/_default/list.html`, preserving its filter and card presentation. For the home page, paginate the site’s regular pages from `params.mainSections` (currently `post`) rather than the home page’s top-level `.Pages`; for section and taxonomy lists, keep their existing `.Pages` collection. Replace the unpaginated page range with:
 
 ~~~go-html-template
-{{ $paginator := .Paginate .Pages }}
+{{ $pages := .Pages }}
+{{ if eq .Kind "home" }}
+  {{ $pages = where .Site.RegularPages "Section" "post" }}
+{{ end }}
+{{ $paginator := .Paginate $pages }}
 {{ range $paginator.Pages }}
   ...
 {{ end }}
 ~~~
 
-Add Bootstrap pagination links using `$paginator.Prev`, `$paginator.Pagers`, and `$paginator.Next`, with each link using its pager `.URL`. The override must apply to home, post, tag, and category list pages so `paginate = 3` and `paginatePath = "page"` recreate the baseline routes.
+Add Bootstrap pagination links using `$paginator.Prev`, `$paginator.Pagers`, and `$paginator.Next`, with each link using its pager `.URL`. The override must apply to home, post, tag, and category list pages so `pagerSize = 3` and `path = "page"` recreate the baseline routes.
 
 - [ ] **Step 2: Restore the legacy static artifact at its published URL.**
 

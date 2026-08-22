@@ -28,7 +28,7 @@ Alternative approaches considered:
 ### Site configuration
 
 - Set the site locale using current Hugo keys: `locale = "en-US"` and `languages.en.label = "English"`.
-- Keep `baseurl`, the current menu destinations, taxonomies, pagination, and `/post/:year/:month/:title/` permalink structure.
+- Keep `baseurl`, the current menu destinations, taxonomies, pagination, and `/post/:year/:month/:title/` permalink structure. Use Hugo’s current `[pagination]` keys with `pagerSize = 3` and `path = "page"`.
 - Add `[security] allowContent = ["text/html", "text/markdown"]` to preserve the existing published HTML artifact under `content/post/2017/elastic/static/` while allowing the site’s Markdown sources to render.
 - Set `[markup.goldmark.renderer] unsafe = true` because the existing Elastic post contains authored raw HTML that must continue to render.
 - Remove the obsolete Universal Analytics `UA-47268287-3` configuration rather than emitting a nonfunctional tracker. Do not add a GA4 tracker without a user-supplied `G-...` measurement ID.
