@@ -28,7 +28,7 @@
 
     {{ $pages := .Pages }}
     {{ if eq .Kind "home" }}
-        {{ $pages = where .Site.RegularPages "Section" "post" }}
+        {{ $pages = .Site.RegularPages }}
     {{ end }}
     {{ $paginator := .Paginate $pages }}
     {{ if ne .Kind "taxonomy" }}
