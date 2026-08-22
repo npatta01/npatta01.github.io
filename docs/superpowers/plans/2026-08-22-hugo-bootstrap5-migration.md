@@ -174,6 +174,9 @@ Add:
 [security]
   allowContent = ["text/html", "text/markdown"]
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [params.options]
   bootStrapJs = true
   breadCrumb = true
