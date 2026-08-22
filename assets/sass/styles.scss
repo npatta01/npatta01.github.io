@@ -1,0 +1,91 @@
+.card-text img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content pre {
+    margin: 1rem 0;
+    padding: 1rem;
+    overflow-x: auto;
+    color: var(--bs-body-color);
+    background-color: var(--bs-light);
+    border: 1px solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    line-height: 1.5;
+}
+
+.content pre code {
+    padding: 0;
+    color: inherit;
+    background: transparent;
+}
+
+// Site identity spike: a restrained violet/amber palette gives the stock
+// Bootstrap layout a recognizable personality without replacing the theme.
+:root {
+    --site-violet: #5b21b6;
+    --site-violet-dark: #3b0764;
+    --site-amber: #f59e0b;
+    --site-ink: #1f2937;
+}
+
+body {
+    color: var(--site-ink);
+    background:
+        radial-gradient(circle at 8% 0%, rgba(139, 92, 246, .13), transparent 28rem),
+        linear-gradient(180deg, #fbfaff 0%, #ffffff 28rem);
+}
+
+.main-header .navbar {
+    padding: .85rem 0;
+    background: linear-gradient(135deg, var(--site-violet-dark), var(--site-violet));
+    box-shadow: 0 .5rem 1.5rem rgba(59, 7, 100, .18);
+}
+
+.main-header .navbar-brand,
+.main-header .navbar .nav-link {
+    color: #fff;
+}
+
+.main-header .navbar-brand {
+    font-weight: 700;
+    letter-spacing: -.03em;
+}
+
+.main-header .navbar .nav-link:hover,
+.main-header .navbar .nav-link.active {
+    color: #fde68a;
+}
+
+main#content > .container.py-3,
+main#content > article.container.py-3 {
+    max-width: 1080px;
+}
+
+.card {
+    border: 1px solid #ede9fe;
+    border-left: 4px solid #8b5cf6;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1.5rem rgba(76, 29, 149, .08);
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 .875rem 2rem rgba(76, 29, 149, .14);
+}
+
+.card-title {
+    font-weight: 700;
+    letter-spacing: -.025em;
+}
+
+.content h2 {
+    padding-bottom: .35rem;
+    border-bottom: 2px solid rgba(139, 92, 246, .25);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--site-violet);
+    border-color: var(--site-violet);
+}

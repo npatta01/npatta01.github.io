@@ -59,8 +59,8 @@ defaultContentLanguage = "en"
   [params.options]
     bootStrapJs = true
     breadCrumb = true
-    listCategoryFilter = true
-    listTagFilter = true
+    listCategoryFilter = false
+    listTagFilter = false
 
   # Date format (default: Jan 2, 2006)
   # date_format = "Jan 2, 2006"

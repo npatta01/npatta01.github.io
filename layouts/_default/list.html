@@ -34,19 +34,22 @@
     {{ if ne .Kind "taxonomy" }}
 
         {{ range $paginator.Pages }}
+        {{ $page := . }}
+        {{ $featuredImage := false }}
+        {{ with $page.Params.images }}
+            {{ $featuredImage = $page.Resources.GetMatch (index . 0) }}
+        {{ end }}
         <div class="card border-light-subtle mb-3">
             <div class="row g-0">
 
-                <div class="col-md-4 d-flex align-items-center">
-                    {{ if isset .Params "images" }}
-                        {{ with .Resources.GetMatch (index .Params.Images 0) }}
-                            {{ $image := .Fill "600x300 Center webp" }}
-                            <img class="img-fluid rounded p-1" src="{{ $image.RelPermalink }}" loading="lazy" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="featured image {{.Title }}">
-                        {{ end }}
-                    {{ end }}
-                </div>
+                {{ with $featuredImage }}
+                    {{ $image := .Fill "600x300 Center webp" }}
+                    <div class="col-md-4 d-flex align-items-center">
+                        <img class="img-fluid rounded p-1" src="{{ $image.RelPermalink }}" loading="lazy" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="featured image {{ $page.Title }}">
+                    </div>
+                {{ end }}
 
-                <div class="col-md-8">
+                <div class="{{ if $featuredImage }}col-md-8{{ else }}col-12{{ end }}">
                     <div class="card-body">
                         <h2 class="card-title text-primary">{{ .Title }}</h2>
 
