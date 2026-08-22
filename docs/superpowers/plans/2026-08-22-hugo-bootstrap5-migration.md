@@ -63,7 +63,7 @@ Run:
 find "$BASELINE_DIR/public" -type f -printf '/%P\n' | sort > "$BASELINE_DIR/routes.txt"
 ~~~
 
-Confirm the baseline includes `/index.html`, `/about/index.html`, `/projects/index.html`, `/presentations/index.html`, `/post/2026/08/fixing-a-black-screen-with-macos-windows-app-and-ubuntu-gnome-remote-login/index.html`, `/tags/index.html`, `/categories/index.html`, `/index.xml`, `/sitemap.xml`, and `/post/2017/elastic/static/index.html`.
+Confirm the baseline includes `/index.html`, `/about/index.html`, `/projects/index.html`, `/presentations/index.html`, `/post/2026/08/fixing-a-black-screen-with-macos-windows-app-and-ubuntu-gnome-remote-login/index.html`, `/tags/index.html`, `/categories/index.html`, `/index.xml`, `/sitemap.xml`, and the actual legacy artifact route `/post/2017/09/guide-to-elastic-search/static/index.html`.
 
 - [ ] **Step 4: Commit no generated baseline files.**
 
@@ -360,7 +360,7 @@ test -s public/tags/index.html
 test -s public/categories/index.html
 test -s public/index.xml
 test -s public/sitemap.xml
-test -s public/post/2017/elastic/static/index.html
+test -s public/post/2017/09/guide-to-elastic-search/static/index.html
 rg -q "use redirection server name:i:1" public/post/2026/08/fixing-a-black-screen-with-macos-windows-app-and-ubuntu-gnome-remote-login/index.html
 rg -q "https://npatta01.github.io/" public/sitemap.xml
 ~~~
